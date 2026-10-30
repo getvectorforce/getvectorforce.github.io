@@ -547,30 +547,60 @@ $ claude / command-code
             <div class="install-step-card" id="step-3">
               <div class="install-step-header">
                 <span class="install-step-badge">STEP 3</span>
-                <h3>Connect Your AI Coding Harnesses (MCP)</h3>
+                <h3>Connect Your AI Coding Agent (Zero Manual JSON Editing)</h3>
               </div>
               <p>
-                VectorForce auto-configures the Model Context Protocol (MCP) server for your favorite coding agents in a single command. Select your harness below:
+                <strong>How MCP actually works:</strong> You <em>never</em> have to run <code>vf mcp</code> manually in a terminal! Instead, each AI coding tool reads its own configuration file and automatically spawns VectorForce in the background over <code>stdio</code>.
               </p>
+
+              <!-- Clear File Mapping Explanation -->
+              <div class="flow-steps" style="margin-bottom: 20px;">
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(99,102,241,0.2);color:#818cf8;">⚡</span>
+                  <div><strong>Google Antigravity:</strong> Reads <code>.agents/mcp_config.json</code> (workspace) and <code>~/.gemini/antigravity/mcp_config.json</code> (global IDE).</div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(16,185,129,0.2);color:#34d399;">⌘</span>
+                  <div><strong>Claude Code &amp; Command Code:</strong> Automatically detect and read <code>.mcp.json</code> in your project root (or via <code>claude mcp add</code> / <code>cmd mcp add</code>).</div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(192,132,252,0.2);color:#c084fc;">🦙</span>
+                  <div><strong>Meta Muse:</strong> Reads <code>~/.config/muse/settings.json</code> and workspace <code>.muse/mcp_config.json</code>.</div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(56,189,248,0.2);color:#38bdf8;">◈</span>
+                  <div><strong>OpenAI Codex CLI:</strong> Reads <code>.codex/config.toml</code> and <code>~/.codex/config.toml</code>.</div>
+                </div>
+              </div>
 
               <div class="harness-tabs">
                 <button class="harness-tab-btn active" type="button" data-harness-tab="all">⚡ All Harnesses (1-Click)</button>
                 <button class="harness-tab-btn" type="button" data-harness-tab="antigravity">Google Antigravity</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="command-code">Command Code</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="command-code">Claude Code / Command Code</button>
                 <button class="harness-tab-btn" type="button" data-harness-tab="muse">Meta Muse</button>
                 <button class="harness-tab-btn" type="button" data-harness-tab="codex">OpenAI Codex</button>
               </div>
 
               <div class="code-window">
                 <div class="code-window-header">
-                  <span id="harness-code-title">Auto-Configure All Harnesses (Recommended)</span>
-                  <button class="copy-chip" id="harness-copy-btn" data-copy="npx vectorforce config install all">Copy</button>
+                  <span id="harness-code-title">Auto-Configure All Harnesses + Verify with vf status</span>
+                  <button class="copy-chip" id="harness-copy-btn" data-copy="npx vectorforce config install all && npx vectorforce status">Copy</button>
                 </div>
-                <pre class="code-pre" id="harness-code-pre"># Automatically configure Antigravity, Command Code, Meta Muse, and OpenAI Codex
+                <pre class="code-pre" id="harness-code-pre"># 1. Auto-configure Antigravity, Claude Code, Command Code, Meta Muse &amp; Codex:
 npx vectorforce config install all
 
-# Or if cloned locally:
-node bin/vf.js config install all</pre>
+# 2. Check which MCP config files were created and verify readiness:
+npx vectorforce status
+
+# Note: You do NOT need to run "vf mcp" manually!
+# Each AI tool reads its config file below and spawns the MCP server automatically.</pre>
+              </div>
+
+              <div style="margin-top: 16px; padding: 14px 18px; border-radius: 10px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.9rem;">
+                <strong style="color: #34d399;">✅ How do I know it's working inside my AI agent?</strong><br />
+                Open your AI coding agent (Antigravity, Claude Code, Command Code, Muse, or Codex) and type in the chat:<br />
+                <code style="color: #f8fafc; background: rgba(0,0,0,0.35); padding: 3px 8px; border-radius: 5px; display: inline-block; margin-top: 6px;">"List active VectorForce tasks and check workspace drift"</code><br />
+                You will immediately see the agent call the <code>list_tasks</code> and <code>check_workspace_drift</code> MCP tools!
               </div>
             </div>
 
@@ -740,3 +770,4 @@ node bin/vf.js config install all</pre>
   <script src="./app.js"></script>
 </body>
 </html>
+

@@ -249,53 +249,69 @@ $ claude / command-code
      ------------------------------------------------------------------------ */
   const harnessConfigs = {
     all: {
-      label: 'Auto-Configure All Harnesses (Recommended)',
-      code: `# Automatically configure Antigravity, Command Code, Meta Muse, and OpenAI Codex
+      label: 'Auto-Configure All Harnesses + Verify with vf status',
+      code: `# 1. Auto-configure Antigravity, Claude Code, Command Code, Meta Muse & Codex:
 npx vectorforce config install all
 
-# Or if cloned locally:
-node bin/vf.js config install all`
+# 2. Check which MCP config files were created and verify readiness:
+npx vectorforce status
+
+# Note: You do NOT need to run "vf mcp" manually!
+# Each AI tool reads its config file below and spawns the MCP server automatically.`
     },
     antigravity: {
-      label: 'Google Antigravity (.mcp.json)',
+      label: 'Google Antigravity (.agents/mcp_config.json + ~/.gemini/antigravity/mcp_config.json)',
       code: `# 1-Command Auto-Setup for Google Antigravity:
 npx vectorforce config install antigravity
 
-# Or add to .mcp.json manually:
+# What this creates/updates automatically:
+#  • Workspace: .agents/mcp_config.json
+#  • Global IDE: ~/.gemini/antigravity/mcp_config.json
 {
   "mcpServers": {
     "vectorforce": {
-      "command": "npx",
-      "args": ["-y", "vectorforce", "mcp"]
+      "command": "node",
+      "args": ["/path/to/bin/vf.js", "mcp", "--workspace", "/your/project"]
     }
   }
 }`
     },
     'command-code': {
-      label: 'Command Code (commandcode.json & taste.md)',
-      code: `# 1-Command Auto-Setup for Command Code:
+      label: 'Claude Code & Command Code (.mcp.json)',
+      code: `# 1-Command Auto-Setup for Claude Code & Command Code:
 npx vectorforce config install command-code
 
-# Automatically registers MCP server + .commandcode/taste/taste.md rules`
+# What this creates automatically in your project root:
+#  • .mcp.json (Natively auto-detected by both Claude Code & Command Code!)
+#  • commandcode.json
+
+# Or register via CLI directly:
+claude mcp add vectorforce -- npx -y vectorforce mcp
+cmd mcp add --transport stdio vectorforce -- npx -y vectorforce mcp`
     },
     muse: {
-      label: 'Meta Muse (.agents/mcp_config.json)',
+      label: 'Meta Muse (.muse/mcp_config.json + ~/.config/muse/settings.json)',
       code: `# 1-Command Auto-Setup for Meta Muse:
-npx vectorforce config install muse-code
+npx vectorforce config install muse
 
-# Configure Meta Muse API key for AI Memory Reasoning:
-npx vectorforce config muse <YOUR_META_MUSE_API_KEY>
-npx vectorforce reason --task auth-module`
+# What this creates/updates automatically:
+#  • Global Muse Settings: ~/.config/muse/settings.json (mcp_servers.vectorforce)
+#  • Workspace Config:     .muse/mcp_config.json
+
+# Optional: Enable Meta Muse AI Reasoning for "vf reason":
+npx vectorforce config muse <YOUR_META_MUSE_API_KEY>`
     },
     codex: {
-      label: 'OpenAI Codex (.codex/config.toml)',
+      label: 'OpenAI Codex (.codex/config.toml + ~/.codex/config.toml)',
       code: `# 1-Command Auto-Setup for OpenAI Codex CLI:
 npx vectorforce config install codex
 
-# Generated .codex/config.toml:
+# What this creates/updates automatically:
+#  • Workspace: .codex/config.toml
+#  • Global:    ~/.codex/config.toml
 [mcp_servers.vectorforce]
-command = "npx"
-args = ["-y", "vectorforce", "mcp"]
+command = "node"
+args = ["/path/to/bin/vf.js", "mcp"]
 [mcp_servers.vectorforce.env]
 VF_HARNESS = "codex"`
     }
@@ -321,3 +337,4 @@ VF_HARNESS = "codex"`
     });
   });
 })();
+
