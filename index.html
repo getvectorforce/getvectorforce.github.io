@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VectorForce (VF) — Git for AI Context | Local-First Engineering Memory</title>
+  <meta name="description" content="VectorForce is a local-first, privacy-preserving engineering context platform and architecture control center for AI coding agents (Google Antigravity, Command Code, Meta Muse, OpenAI Codex)." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Ambient Background Mesh -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <img src="./favicon.svg" alt="VectorForce Logo" class="brand-logo" />
+        <span>VectorForce</span>
+        <span class="brand-badge">v0.1.0</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#why-vectorforce">Why VectorForce</a></li>
+        <li><a href="#demo-video">Demo Video</a></li>
+        <li><a href="#studio-preview">Studio UI</a></li>
+        <li><a href="#installation">Installation Guide</a></li>
+        <li><a href="#mcp-tools">MCP Tools</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Theme" aria-label="Switch to light mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <a href="https://github.com/getvectorforce/VectorForce" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="#installation" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-pills">
+          <span class="pill"><span class="pill-dot"></span> Local-First SQLite WAL</span>
+          <span class="pill">Zero Backend Runtime Dependencies</span>
+          <span class="pill">Meta Muse &amp; Llama Reasoning Ready</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="gradient-text">Git for AI Context.</span><br />
+          End Coding Agent Amnesia.
+        </h1>
+
+        <p class="hero-subtitle">
+          Git tracks your source code. <strong>VectorForce</strong> tracks your AI coding agent’s architectural decisions, non-negotiable constraints, and verifiable workspace evidence—so you can switch seamlessly between <strong>Google Antigravity</strong>, <strong>Command Code</strong>, <strong>Meta Muse</strong>, and <strong>OpenAI Codex</strong> without losing a single thought.
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="#installation" class="btn btn-primary btn-lg">
+            <span>Installation Guide</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#demo-video" class="btn btn-secondary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span>Watch Demo Video</span>
+          </a>
+          <a href="https://github.com/getvectorforce/VectorForce" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+            <span>View on GitHub</span>
+          </a>
+        </div>
+
+        <!-- 1-Line Quick Install Copy Box -->
+        <div class="quick-install-box" role="region" aria-label="Quick install command">
+          <span class="quick-install-prompt">$</span>
+          <span class="quick-install-cmd">npx vectorforce init &amp;&amp; npx vectorforce studio</span>
+          <button class="copy-chip" data-copy="npx vectorforce init && npx vectorforce studio">
+            Copy
+          </button>
+        </div>
+
+        <!-- Supported Harnesses Strip -->
+        <div class="harness-strip">
+          <span class="harness-strip-label">Works natively via MCP with:</span>
+          <div class="harness-badges">
+            <span class="harness-chip">⚡ Google Antigravity</span>
+            <span class="harness-chip">⌘ Command Code</span>
+            <span class="harness-chip">🦙 Meta Muse</span>
+            <span class="harness-chip">◈ OpenAI Codex CLI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intuitive Explanation: Before vs After VectorForce -->
+    <section id="why-vectorforce">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Understand It In 10 Seconds</span>
+          <h2 class="section-title">Why AI Coding Agents Break Your Architecture</h2>
+          <p class="section-subtitle">
+            Every time you close a chat window or switch tools, your agent forgets <em>why</em> your code was designed that way. VectorForce replaces ephemeral chat history with cryptographic engineering memory.
+          </p>
+        </div>
+
+        <div class="metaphor-grid">
+          <!-- Without VectorForce -->
+          <div class="comparison-card bad">
+            <span class="comparison-tag">✗ Without VectorForce</span>
+            <h3>Ephemeral Chat = Agent Amnesia</h3>
+            <p class="desc">Each coding agent session starts blind, guessing your rules and silently breaking prior invariants.</p>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <span class="flow-icon">1</span>
+                <div><strong>Vanishing Decisions:</strong> Architectural trade-offs and security boundaries disappear when the context window resets.</div>
+              </div>
+              <div class="flow-step">
+                <span class="flow-icon">2</span>
+                <div><strong>Silent Workspace Drift:</strong> Teammates or other agents edit files, and your current agent continues with stale assumptions.</div>
+              </div>
+              <div class="flow-step">
+                <span class="flow-icon">3</span>
+                <div><strong>Locked Into One Tool:</strong> Starting a feature in Antigravity and finishing it in Command Code or Codex requires re-explaining everything.</div>
+              </div>
+              <div class="flow-step">
+                <span class="flow-icon">4</span>
+                <div><strong>Hallucinated Ground Truth:</strong> Agents confuse their own unverified claims with actual Git and file state.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- With VectorForce -->
+          <div class="comparison-card good">
+            <span class="comparison-tag">✓ With VectorForce</span>
+            <h3>Cryptographic Context Continuity</h3>
+            <p class="desc">Immutable checkpoints bind model intent to verifiable Git commits and SHA-256 file hashes.</p>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <span class="flow-icon">✓</span>
+                <div><strong>Immutable Checkpoints:</strong> Goals, non-negotiable constraints, and ADRs are committed to a local SQLite WAL store.</div>
+              </div>
+              <div class="flow-step">
+                <span class="flow-icon">✓</span>
+                <div><strong>Automatic Drift Detection:</strong> Before resuming work, VectorForce compares current Git HEAD and file SHA-256 hashes against the last checkpoint.</div>
+              </div>
+              <div class="flow-step">
+                <span class="flow-icon">✓</span>
+                <div><strong>Instant Cross-Harness Resume:</strong> Start in Antigravity, run <code>vf resume</code> in Command Code, Muse, or Codex, and pick up immediately.</div>
+              </div>
+              <div class="flow-step">
+                <span class="flow-icon">✓</span>
+                <div><strong>Claims vs. Evidence Fencing:</strong> Model assertions (<em>claims</em>) are strictly separated from cryptographic observations (<em>evidence</em>).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Video Placeholder & Interactive Walkthrough -->
+    <section id="demo-video">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Product Walkthrough</span>
+          <h2 class="section-title">See VectorForce in Action</h2>
+          <p class="section-subtitle">
+            Watch how VectorForce captures checkpoints, detects silent workspace drift, reasons over engineering memory with Meta Llama/Muse, and hands off context across harnesses.
+          </p>
+        </div>
+
+        <div class="video-showcase-wrapper">
+          <div class="video-frame-card">
+            <div class="video-topbar">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+              <span>vectorforce-demo-walkthrough.mp4 • 1080p HD</span>
+              <span>03:45</span>
+            </div>
+
+            <!-- ==============================================================
+                 DEMO VIDEO PLACEHOLDER SLOT
+                 To embed your real video file or YouTube/Loom link:
+                 Option A (Local MP4 in this repo):
+                   Set src="./demo.mp4" on the <source> tag below.
+                 Option B (YouTube / Loom Embed):
+                   Uncomment the <iframe> below and paste your embed URL.
+                 ============================================================== -->
+            <div class="video-stage">
+              <video id="vf-demo-video" controls preload="metadata" style="display: none;">
+                <source src="" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+
+              <!-- Uncomment below to use a YouTube or Loom embed instead:
+              <iframe
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="VectorForce Product Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+              -->
+
+              <div class="video-placeholder-overlay">
+                <button id="play-demo-btn" class="play-trigger-btn" title="Play Interactive Demo Walkthrough" aria-label="Play Demo">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3"/>
+                  </svg>
+                </button>
+                <div class="video-placeholder-title" id="video-sim-title">
+                  1. The Problem: Coding Agent Amnesia
+                </div>
+                <p class="video-placeholder-desc">
+                  Click Play or select any chapter below to preview the workflow (or drop in <code>demo.mp4</code> / YouTube URL in <code>index.html</code>).
+                </p>
+
+                <div class="video-sim-screen" id="video-sim-screen">
+<span style="color:#fb7185"># Without VectorForce: Switching from Antigravity to Command Code</span>
+$ claude / command-code
+&gt; "Continue working on the OAuth PKCE task"
+<span style="color:#f59e0b">⚠️ Agent has zero memory of prior session:</span>
+  ✗ Forgot invariant constraint: "Zero external runtime dependencies"
+  ✗ Unaware that src/policy/authorizer.js was modified 10 mins ago
+  ✗ Re-introduces npm package violating ADR-002 security boundary
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Chapter Selector -->
+            <div class="video-chapters-bar">
+              <button class="chapter-btn active" type="button">
+                <span class="chapter-time">00:00 • Chapter 1</span>
+                <span class="chapter-name">Agent Amnesia</span>
+              </button>
+              <button class="chapter-btn" type="button">
+                <span class="chapter-time">00:45 • Chapter 2</span>
+                <span class="chapter-name">Immutable Checkpoint</span>
+              </button>
+              <button class="chapter-btn" type="button">
+                <span class="chapter-time">01:30 • Chapter 3</span>
+                <span class="chapter-name">Drift Detection</span>
+              </button>
+              <button class="chapter-btn" type="button">
+                <span class="chapter-time">02:15 • Chapter 4</span>
+                <span class="chapter-name">Llama AI Reasoning</span>
+              </button>
+              <button class="chapter-btn" type="button">
+                <span class="chapter-time">03:10 • Chapter 5</span>
+                <span class="chapter-name">VectorForce Studio</span>
+              </button>
+            </div>
+          </div>
+          <p class="video-replace-note">
+            💡 <strong>Video Placeholder Ready:</strong> Replace the placeholder in <code>index.html</code> (line 195) with your <code>./demo.mp4</code> file or YouTube/Loom embed URL anytime.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Architecture Pillars -->
+    <section id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Core Capabilities</span>
+          <h2 class="section-title">Engineered for Privacy, Speed &amp; Verifiability</h2>
+          <p class="section-subtitle">
+            Built from the ground up using pure Node.js built-ins (<code>node:sqlite</code>, <code>node:crypto</code>, <code>node:http</code>) with zero third-party runtime dependencies.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box icon-indigo">🔒</div>
+            <h3>Claims vs. Evidence Fencing</h3>
+            <p>
+              Model assertions (goals, constraints, ADRs) are recorded as <code>claims</code>. Git commit SHAs and SHA-256 document hashes are recorded as <code>evidence</code>—preventing AI hallucinations from masquerading as ground truth.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box icon-emerald">🧭</div>
+            <h3>Workspace &amp; Document Drift</h3>
+            <p>
+              Automatically detects if a commit changed or an allowlisted specification drifted since the last checkpoint, alerting your agent before it writes conflicting code.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box icon-violet">🧠</div>
+            <h3>Meta Muse &amp; Llama Reasoning</h3>
+            <p>
+              Run <code>vf reason</code> to synthesize where you left off, what changed in the codebase, architectural risks, and ranked next steps—with graceful offline fallback.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box icon-cyan">🔌</div>
+            <h3>Universal MCP Protocol</h3>
+            <p>
+              Exposes a compliant JSON-RPC stdio Model Context Protocol server with 9 specialized tools for Google Antigravity, Command Code, Meta Muse, and OpenAI Codex.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box icon-amber">📦</div>
+            <h3>Tamper-Evident Handoffs</h3>
+            <p>
+              Export selective context packages with SHA-256 manifest verification. Share task continuity with teammates or remote workspaces without leaking secrets.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box icon-rose">🛡️</div>
+            <h3>Zero-Leak Allowlist Policy</h3>
+            <p>
+              Strict workspace containment blocks path traversal (<code>..</code>), symlinks, binary files, and sensitive credentials (<code>.env</code>, <code>*.key</code>). Receipts never store raw file bodies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive VectorForce Studio Preview -->
+    <section id="studio-preview">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">VectorForce Studio (Web UI)</span>
+          <h2 class="section-title">Interactive Architecture Control Center</h2>
+          <p class="section-subtitle">
+            Launch <code>npx vectorforce studio</code> on port <code>3210</code> to inspect module dependencies, blast radius, governing ADRs, and live AI memory. <strong>Click any node below to inspect it:</strong>
+          </p>
+        </div>
+
+        <div class="studio-preview-shell">
+          <div class="studio-header-bar">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="window-dot dot-green"></span>
+              <strong class="mono" style="font-size:0.88rem;">VectorForce Studio • http://127.0.0.1:3210</strong>
+              <span class="brand-badge">Health: 98%</span>
+            </div>
+            <div class="studio-tabs">
+              <span class="studio-tab active">Architecture Topology Graph</span>
+              <span class="studio-tab">Claims vs Evidence</span>
+              <span class="studio-tab">Memory Timeline</span>
+              <span class="studio-tab">Safe Handoff</span>
+            </div>
+          </div>
+
+          <div class="studio-body">
+            <!-- Left Interactive SVG Graph -->
+            <div class="studio-canvas">
+              <svg class="topology-svg" viewBox="0 0 680 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Connection Lines -->
+                <path d="M190 75 L330 140" stroke="#6366f1" stroke-width="2" stroke-dasharray="5 5" opacity="0.7"/>
+                <path d="M190 225 L330 160" stroke="#c084fc" stroke-width="2" opacity="0.7"/>
+                <path d="M430 150 L510 85" stroke="#10b981" stroke-width="2" opacity="0.7"/>
+                <path d="M430 155 L510 215" stroke="#38bdf8" stroke-width="2" opacity="0.7"/>
+                <path d="M380 185 L380 245" stroke="#fbbf24" stroke-width="2" opacity="0.7"/>
+
+                <!-- Node 1: MCP Server -->
+                <g class="topo-node selected" data-node="mcp" transform="translate(30, 40)">
+                  <rect width="165" height="68" rx="12" fill="#111936" stroke="#6366f1" stroke-width="2"/>
+                  <circle cx="22" cy="24" r="5" fill="#10b981"/>
+                  <text x="36" y="28" fill="#f8fafc" font-family="JetBrains Mono" font-size="11" font-weight="700">mcp-server.js</text>
+                  <text x="20" y="48" fill="#94a3b8" font-family="Inter" font-size="10">9 MCP Tools • stdio</text>
+                </g>
+
+                <!-- Node 2: AI Reasoning -->
+                <g class="topo-node" data-node="reasoning" transform="translate(30, 190)">
+                  <rect width="165" height="68" rx="12" fill="#111936" stroke="#c084fc" stroke-width="1.5"/>
+                  <circle cx="22" cy="24" r="5" fill="#c084fc"/>
+                  <text x="36" y="28" fill="#f8fafc" font-family="JetBrains Mono" font-size="11" font-weight="700">reasoning.js</text>
+                  <text x="20" y="48" fill="#94a3b8" font-family="Inter" font-size="10">Meta Muse / Llama AI</text>
+                </g>
+
+                <!-- Node 3: Policy Authorizer (Center Hub) -->
+                <g class="topo-node" data-node="authorizer" transform="translate(275, 115)">
+                  <rect width="175" height="72" rx="14" fill="#132238" stroke="#10b981" stroke-width="2"/>
+                  <circle cx="22" cy="25" r="5" fill="#10b981"/>
+                  <text x="36" y="29" fill="#f8fafc" font-family="JetBrains Mono" font-size="11.5" font-weight="700">authorizer.js</text>
+                  <text x="20" y="50" fill="#34d399" font-family="Inter" font-size="10">Zero-Leak Policy Gate</text>
+                </g>
+
+                <!-- Node 4: SQLite WAL Store -->
+                <g class="topo-node" data-node="sqlite" transform="translate(495, 45)">
+                  <rect width="160" height="68" rx="12" fill="#111936" stroke="#38bdf8" stroke-width="1.5"/>
+                  <circle cx="22" cy="24" r="5" fill="#38bdf8"/>
+                  <text x="36" y="28" fill="#f8fafc" font-family="JetBrains Mono" font-size="11" font-weight="700">sqlite-store.js</text>
+                  <text x="20" y="48" fill="#94a3b8" font-family="Inter" font-size="10">node:sqlite WAL Mode</text>
+                </g>
+
+                <!-- Node 5: Handoff Service -->
+                <g class="topo-node" data-node="handoff" transform="translate(495, 185)">
+                  <rect width="160" height="68" rx="12" fill="#111936" stroke="#fbbf24" stroke-width="1.5"/>
+                  <circle cx="22" cy="24" r="5" fill="#fbbf24"/>
+                  <text x="36" y="28" fill="#f8fafc" font-family="JetBrains Mono" font-size="11" font-weight="700">handoff-service.js</text>
+                  <text x="20" y="48" fill="#94a3b8" font-family="Inter" font-size="10">SHA-256 Bundle Export</text>
+                </g>
+              </svg>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:#94a3b8; border-top:1px solid rgba(255,255,255,0.07); padding-top:12px;">
+                <span>👆 Click any architecture node above to inspect its blast radius &amp; ADR contract</span>
+                <span class="mono" style="color:#818cf8;">75/75 Tests Passing</span>
+              </div>
+            </div>
+
+            <!-- Right Live Node Inspector -->
+            <div class="studio-inspector">
+              <span class="inspector-badge" id="inspector-status">VERIFIED • ZERO DRIFT</span>
+              <div>
+                <h4 class="mono" id="inspector-name" style="font-size:1.1rem; color:#fff; margin-bottom:4px;">src/mcp/mcp-server.js</h4>
+                <p id="inspector-layer" style="font-size:0.84rem; color:#818cf8;">Harness Bridge Layer (JSON-RPC stdio)</p>
+              </div>
+
+              <div class="inspector-card">
+                <h5>Blast Radius</h5>
+                <div id="inspector-blast" style="color:#e2e8f0; font-weight:600;">
+                  High (4 AI Harnesses: Antigravity, Command Code, Muse, Codex)
+                </div>
+              </div>
+
+              <div class="inspector-card">
+                <h5>Governing Architecture Decision (ADR)</h5>
+                <div id="inspector-adr" class="mono" style="color:#34d399; font-size:0.8rem;">
+                  ADR-004 &amp; ADR-012: Multi-Harness MCP Protocol
+                </div>
+              </div>
+
+              <div class="inspector-card">
+                <h5>Contract &amp; Security Role</h5>
+                <p id="inspector-desc" style="color:#cbd5e1; line-height:1.55;">
+                  Exposes 9 deterministic tools over JSON-RPC stdio. Enforces destination harness authorization before serving briefings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Complete Installation & Quickstart Guide -->
+    <section id="installation">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Step-by-Step Setup</span>
+          <h2 class="section-title">Installation &amp; Quickstart Guide</h2>
+          <p class="section-subtitle">
+            Get VectorForce running in under 60 seconds. Requires <strong>Node.js 22.5.0+</strong> (uses native built-in <code>node:sqlite</code> with zero external dependencies).
+          </p>
+        </div>
+
+        <div class="install-layout">
+          <!-- Sticky Left Navigation -->
+          <aside class="install-steps-nav">
+            <h4>Setup Checklist</h4>
+            <ul class="step-nav-list">
+              <li class="step-nav-item"><a href="#step-1"><span class="step-num">1</span> Install VectorForce</a></li>
+              <li class="step-nav-item"><a href="#step-2"><span class="step-num">2</span> Initialize &amp; Create Task</a></li>
+              <li class="step-nav-item"><a href="#step-3"><span class="step-num">3</span> Connect AI Harnesses</a></li>
+              <li class="step-nav-item"><a href="#step-4"><span class="step-num">4</span> Commit Checkpoints</a></li>
+              <li class="step-nav-item"><a href="#step-5"><span class="step-num">5</span> AI Memory &amp; Studio UI</a></li>
+            </ul>
+          </aside>
+
+          <!-- Right Step Cards -->
+          <div class="install-content">
+            <!-- Step 1 -->
+            <div class="install-step-card" id="step-1">
+              <div class="install-step-header">
+                <span class="install-step-badge">STEP 1</span>
+                <h3>Install VectorForce (npm or GitHub)</h3>
+              </div>
+              <p>
+                Install globally via npm to use the <code>vf</code> and <code>vectorforce</code> CLI commands anywhere, or clone directly from GitHub:
+              </p>
+              <div class="code-window">
+                <div class="code-window-header">
+                  <span>Terminal — Global npm Install or Source Clone</span>
+                  <button class="copy-chip" data-copy="npm install -g vectorforce">Copy npm</button>
+                </div>
+                <pre class="code-pre"><span class="code-comment"># Option A: Install globally from npm (Recommended)</span>
+<span class="code-cmd">npm install -g vectorforce</span>
+
+<span class="code-comment"># Option B: Run directly via npx without installing</span>
+<span class="code-cmd">npx vectorforce --help</span>
+
+<span class="code-comment"># Option C: Clone from GitHub (Zero dependencies to install!)</span>
+<span class="code-cmd">git clone https://github.com/getvectorforce/VectorForce.git</span>
+<span class="code-cmd">cd VectorForce &amp;&amp; npm test</span></pre>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="install-step-card" id="step-2">
+              <div class="install-step-header">
+                <span class="install-step-badge">STEP 2</span>
+                <h3>Initialize Your Project &amp; Create an Active Task</h3>
+              </div>
+              <p>
+                Navigate to your repository and initialize VectorForce. This creates a local, git-ignored <code>.vectorforce/vectorforce.db</code> SQLite WAL store inside your workspace.
+              </p>
+              <div class="code-window">
+                <div class="code-window-header">
+                  <span>Terminal — Project &amp; Task Initialization</span>
+                  <button class="copy-chip" data-copy="vf init && vf task auth-module &quot;Implement PKCE OAuth Authentication&quot;">Copy</button>
+                </div>
+                <pre class="code-pre"><span class="code-comment"># 1. Initialize VectorForce in your repository root</span>
+<span class="code-cmd">vf init</span>
+
+<span class="code-comment"># 2. Create and activate an engineering task</span>
+<span class="code-cmd">vf task</span> <span class="code-flag">auth-module</span> <span class="code-str">"Implement PKCE OAuth Authentication"</span>
+
+<span class="code-comment"># 3. Allowlist architecture documents for cryptographic hash tracking</span>
+<span class="code-cmd">vf policy allow</span> <span class="code-str">AGENTS.md</span>
+<span class="code-cmd">vf policy allow</span> <span class="code-str">README.md</span></pre>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="install-step-card" id="step-3">
+              <div class="install-step-header">
+                <span class="install-step-badge">STEP 3</span>
+                <h3>Connect Your AI Coding Harnesses (MCP)</h3>
+              </div>
+              <p>
+                VectorForce auto-configures the Model Context Protocol (MCP) server for your favorite coding agents in a single command. Select your harness below:
+              </p>
+
+              <div class="harness-tabs">
+                <button class="harness-tab-btn active" type="button" data-harness-tab="all">⚡ All Harnesses (1-Click)</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="antigravity">Google Antigravity</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="command-code">Command Code</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="muse">Meta Muse</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="codex">OpenAI Codex</button>
+              </div>
+
+              <div class="code-window">
+                <div class="code-window-header">
+                  <span id="harness-code-title">Auto-Configure All Harnesses (Recommended)</span>
+                  <button class="copy-chip" id="harness-copy-btn" data-copy="npx vectorforce config install all">Copy</button>
+                </div>
+                <pre class="code-pre" id="harness-code-pre"># Automatically configure Antigravity, Command Code, Meta Muse, and OpenAI Codex
+npx vectorforce config install all
+
+# Or if cloned locally:
+node bin/vf.js config install all</pre>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="install-step-card" id="step-4">
+              <div class="install-step-header">
+                <span class="install-step-badge">STEP 4</span>
+                <h3>Capture Checkpoints &amp; Detect Workspace Drift</h3>
+              </div>
+              <p>
+                At the end of a work session—or before switching from one AI agent to another—record an immutable checkpoint. When resuming, check for drift and retrieve the authorized briefing:
+              </p>
+              <div class="code-window">
+                <div class="code-window-header">
+                  <span>Terminal — Checkpoint, Drift &amp; Cross-Harness Resume</span>
+                  <button class="copy-chip" data-copy="vf drift --task auth-module && vf resume --task auth-module --dest antigravity">Copy</button>
+                </div>
+                <pre class="code-pre"><span class="code-comment"># Commit an immutable checkpoint with Claims + Verifiable Evidence</span>
+<span class="code-cmd">vf checkpoint</span> <span class="code-flag">--task</span> auth-module \
+  <span class="code-flag">--summary</span> <span class="code-str">"Completed PKCE OAuth handshake and token validation"</span> \
+  <span class="code-flag">--goal</span> <span class="code-str">"Ship secure OAuth flow"</span> \
+  <span class="code-flag">--constraint</span> <span class="code-str">"Zero external auth libraries"</span> \
+  <span class="code-flag">--decision</span> <span class="code-str">"DEC-AUTH-01:PKCE:Use SHA-256 code challenge with local storage"</span> \
+  <span class="code-flag">--next</span> <span class="code-str">"Implement refresh token rotation"</span> \
+  <span class="code-flag">--doc</span> <span class="code-str">"AGENTS.md"</span>
+
+<span class="code-comment"># Check if Git commits or allowlisted files drifted since the checkpoint</span>
+<span class="code-cmd">vf drift</span> <span class="code-flag">--task</span> auth-module
+
+<span class="code-comment"># Generate an authorized briefing for your destination harness</span>
+<span class="code-cmd">vf resume</span> <span class="code-flag">--task</span> auth-module <span class="code-flag">--dest</span> antigravity</pre>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="install-step-card" id="step-5">
+              <div class="install-step-header">
+                <span class="install-step-badge">STEP 5</span>
+                <h3>Reason with AI Memory &amp; Launch VectorForce Studio</h3>
+              </div>
+              <p>
+                Use Meta Muse, Llama, OpenRouter, or local Ollama to synthesize an executive continuation narrative, or open the visual Studio dashboard:
+              </p>
+              <div class="code-window">
+                <div class="code-window-header">
+                  <span>Terminal — AI Memory Reasoning &amp; Web Control Center</span>
+                  <button class="copy-chip" data-copy="vf studio">Copy Studio</button>
+                </div>
+                <pre class="code-pre"><span class="code-comment"># Configure Meta Muse / Llama reasoning provider (or use local Ollama automatically)</span>
+<span class="code-cmd">vf config muse</span> <span class="code-str">&lt;YOUR_API_KEY&gt;</span>
+<span class="code-cmd">vf reason</span> <span class="code-flag">--task</span> auth-module
+
+<span class="code-comment"># Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210</span>
+<span class="code-cmd">vf studio</span></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MCP Protocol Tools Reference -->
+    <section id="mcp-tools">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Model Context Protocol</span>
+          <h2 class="section-title">9 Native MCP Tools for Autonomous Agents</h2>
+          <p class="section-subtitle">
+            Once connected via MCP, your AI coding agent automatically calls these tools to stay aligned with your project's architectural invariants.
+          </p>
+        </div>
+
+        <div class="mcp-grid">
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>save_checkpoint</span> <span>WRITE</span></div>
+            <p>Commits an immutable checkpoint combining model claims with verifiable Git commit SHAs and allowlisted document hashes.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>get_resume_briefing</span> <span>READ</span></div>
+            <p>Retrieves a harness-authorized markdown briefing separating invariant constraints, active goals, and verified evidence.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>check_workspace_drift</span> <span>VERIFY</span></div>
+            <p>Compares the live working tree and allowlisted files against the latest checkpoint to flag silent changes.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>reason_about_task</span> <span>AI MEMORY</span></div>
+            <p>Generates a Llama / Meta Muse narrative summarizing where work left off, architectural risks, and ranked next actions.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>list_tasks</span> <span>QUERY</span></div>
+            <p>Discovers and filters active, paused, or completed tasks tracked inside the workspace SQLite WAL database.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>set_document_policy</span> <span>POLICY</span></div>
+            <p>Manages the strict project allowlist governing which markdown or architecture files can be collected as evidence.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>export_handoff</span> <span>BUNDLE</span></div>
+            <p>Packages selected checkpoints and verified evidence into a tamper-evident SHA-256 bundle with preview mode.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>import_handoff</span> <span>RECONCILE</span></div>
+            <p>Cryptographically verifies a handoff manifest and safely imports external task context into a destination workspace.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>get_timeline</span> <span>AUDIT</span></div>
+            <p>Synthesizes a chronological continuity recap of checkpoints, decisions, and handoffs across sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom: 14px;">
+            <img src="./favicon.svg" alt="VectorForce Logo" class="brand-logo" />
+            <span>VectorForce</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; max-width: 360px;">
+            <strong>Git for AI Context.</strong> Local-first, privacy-preserving engineering memory and architecture control center for autonomous coding agents.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#why-vectorforce">Why VectorForce</a></li>
+            <li><a href="#demo-video">Demo Walkthrough</a></li>
+            <li><a href="#studio-preview">VectorForce Studio</a></li>
+            <li><a href="#mcp-tools">MCP Server Tools</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="#installation">Installation Guide</a></li>
+            <li><a href="https://github.com/getvectorforce/VectorForce" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+            <li><a href="https://github.com/getvectorforce/VectorForce/tree/main/wiki" target="_blank" rel="noopener noreferrer">Architecture ADRs</a></li>
+            <li><a href="https://www.npmjs.com/package/vectorforce" target="_blank" rel="noopener noreferrer">npm Package</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Supported Harnesses</h4>
+          <ul>
+            <li><a href="#step-3">Google Antigravity</a></li>
+            <li><a href="#step-3">Command Code</a></li>
+            <li><a href="#step-3">Meta Muse</a></li>
+            <li><a href="#step-3">OpenAI Codex CLI</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 VectorForce (getvectorforce). Released under the MIT / Apache-2.0 License.</span>
+        <span class="mono">Zero Telemetry • 100% Local-First SQLite WAL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
