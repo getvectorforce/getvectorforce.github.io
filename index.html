@@ -639,22 +639,44 @@ npx vectorforce status
             <div class="install-step-card" id="step-5">
               <div class="install-step-header">
                 <span class="install-step-badge">STEP 5</span>
-                <h3>Reason with AI Memory &amp; Launch VectorForce Studio</h3>
+                <h3>Configure AI Memory Models (Ollama, Muse, OpenRouter, OpenAI, Anthropic, BYOK) &amp; Launch Studio</h3>
               </div>
               <p>
-                Use Meta Muse, Llama, OpenRouter, or local Ollama to synthesize an executive continuation narrative, or open the visual Studio dashboard:
+                VectorForce’s <code>vf reason</code> engine works <strong>100% locally with Ollama by default</strong>, or connects to any cloud model provider (Meta Muse, OpenRouter, OpenAI, Anthropic, or any custom BYOK endpoint). You can also configure models visually inside <strong>VectorForce Studio</strong> (<code>vf studio</code> → Settings):
               </p>
+
+              <!-- Model Provider Interactive Tabs -->
+              <div class="harness-tabs" id="llm-provider-tabs">
+                <button class="harness-tab-btn active" type="button" data-llm-tab="ollama">🏠 Local Ollama (Default)</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="muse">🦙 Meta Muse / Llama</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="openrouter">🌐 OpenRouter (Multi-Model)</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="openai">◈ OpenAI / Codex</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="anthropic">✦ Anthropic Claude</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="byok">🔑 Custom BYOK (Groq / vLLM / LM Studio)</button>
+              </div>
+
               <div class="code-window">
                 <div class="code-window-header">
-                  <span>Terminal — AI Memory Reasoning &amp; Web Control Center</span>
-                  <button class="copy-chip" data-copy="vf studio">Copy Studio</button>
+                  <span id="llm-code-title">Local Ollama — 100% Offline &amp; Zero API Key Required (Default)</span>
+                  <button class="copy-chip" id="llm-copy-btn" data-copy="vf config ollama llama3.1:8b && vf reason --task auth-module && vf studio">Copy</button>
                 </div>
-                <pre class="code-pre"><span class="code-comment"># Configure Meta Muse / Llama reasoning provider (or use local Ollama automatically)</span>
-<span class="code-cmd">vf config muse</span> <span class="code-str">&lt;YOUR_API_KEY&gt;</span>
-<span class="code-cmd">vf reason</span> <span class="code-flag">--task</span> auth-module
+                <pre class="code-pre" id="llm-code-pre"># 1. Pull any local model in Ollama (llama3.1:8b, qwen2.5-coder, deepseek-r1)
+ollama pull llama3.1:8b
 
-<span class="code-comment"># Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210</span>
-<span class="code-cmd">vf studio</span></pre>
+# 2. Configure VectorForce to use Local Ollama (default on http://127.0.0.1:11434)
+vf config ollama llama3.1:8b
+
+# 3. Synthesize AI Engineering Memory narrative for your active task
+vf reason --task auth-module
+
+# 4. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+vf studio</pre>
+              </div>
+
+              <div style="margin-top: 16px; padding: 14px 18px; border-radius: 10px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.88rem; color: var(--text-secondary);">
+                <strong style="color: #818cf8;">🖥️ Configure Visually in VectorForce Studio:</strong>
+                Run <code>vf studio</code> (opens <code>http://127.0.0.1:3210</code>) and click the <strong>Settings</strong> tab in the sidebar to switch providers, paste your API key, or override the model name in `.vectorforce/config.json` with one click.
+                Need deterministic output with zero LLM calls? Run <code>vf reason --task auth-module --raw</code>.
               </div>
             </div>
           </div>

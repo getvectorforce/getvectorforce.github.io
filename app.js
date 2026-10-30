@@ -336,5 +336,121 @@ VF_HARNESS = "codex"`
       if (harnessCopyBtn) harnessCopyBtn.setAttribute('data-copy', item.code);
     });
   });
+
+  /* ------------------------------------------------------------------------
+     6. Installation Guide Step 5 — External Model Provider Switcher
+        (Local Ollama, Meta Muse, OpenRouter, OpenAI, Anthropic, Custom BYOK)
+     ------------------------------------------------------------------------ */
+  const llmProviderConfigs = {
+    ollama: {
+      label: 'Local Ollama — 100% Offline & Zero API Key Required (Default)',
+      code: `# 1. Pull any local model in Ollama (llama3.1:8b, qwen2.5-coder, deepseek-r1)
+ollama pull llama3.1:8b
+
+# 2. Configure VectorForce to use Local Ollama (default on http://127.0.0.1:11434)
+vf config ollama llama3.1:8b
+
+# 3. Synthesize AI Engineering Memory narrative for your active task
+vf reason --task auth-module
+
+# 4. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+vf studio`
+    },
+    muse: {
+      label: 'Meta Muse / Llama API (Responses API at api.meta.ai/v1)',
+      code: `# 1. Configure Meta Muse API key (defaults to model: muse-spark-1.3)
+vf config muse <YOUR_META_MUSE_API_KEY>
+
+# Optional: Specify a custom Meta Muse / Llama model
+vf config muse <YOUR_META_MUSE_API_KEY> muse-spark-1.3
+
+# 2. Reason over task checkpoints, code symbols & workspace drift
+vf reason --task auth-module
+
+# 3. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+vf studio`
+    },
+    openrouter: {
+      label: 'OpenRouter — Access DeepSeek, Claude, Llama 3.3, Gemini & 200+ Models',
+      code: `# 1. Configure OpenRouter API key (defaults to deepseek/deepseek-v4.1-flash-1017)
+vf config openrouter <YOUR_OPENROUTER_API_KEY>
+
+# Or choose any OpenRouter model (Claude, Llama 3.3, DeepSeek, Qwen):
+vf config openrouter <YOUR_OPENROUTER_API_KEY> meta-llama/llama-3.3-70b-instruct
+vf config openrouter <YOUR_OPENROUTER_API_KEY> anthropic/claude-3.7-sonnet
+
+# 2. Run AI Memory Reasoning (or override model per-run with --model)
+vf reason --task auth-module --model deepseek/deepseek-v4.1-flash-1017
+
+# 3. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+vf studio`
+    },
+    openai: {
+      label: 'OpenAI & Codex API (o3-mini, gpt-4.1, gpt-4o)',
+      code: `# 1. Configure OpenAI API key and model (saved in .vectorforce/config.json)
+vf config openai <YOUR_OPENAI_API_KEY> o3-mini
+
+# Or use gpt-4.1 / gpt-4o:
+vf config openai <YOUR_OPENAI_API_KEY> gpt-4.1
+
+# 2. Reason over active task memory + workspace drift
+vf reason --task auth-module
+
+# 3. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+vf studio`
+    },
+    anthropic: {
+      label: 'Anthropic Claude API (claude-sonnet-4-20250514, claude-3-7-sonnet-latest)',
+      code: `# 1. Configure Anthropic API key and Claude model
+vf config anthropic <YOUR_ANTHROPIC_API_KEY> claude-sonnet-4-20250514
+
+# Or configure via OpenRouter for unified billing:
+vf config openrouter <YOUR_OPENROUTER_KEY> anthropic/claude-sonnet-4
+
+# 2. Reason over active task memory + workspace drift
+vf reason --task auth-module
+
+# 3. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+vf studio`
+    },
+    byok: {
+      label: 'Custom BYOK — Groq, Together AI, LM Studio, vLLM, Fireworks, Azure',
+      code: `# 1. Connect ANY OpenAI-compatible endpoint (Groq, Together, LM Studio, vLLM):
+# Syntax: vf config byok <BASE_URL> <API_KEY> <MODEL>
+
+# Example A — Groq Cloud (Ultra-fast Llama 3.3 70B):
+vf config byok https://api.groq.com/openai/v1 <GROQ_API_KEY> llama-3.3-70b-versatile
+
+# Example B — Local LM Studio / vLLM Server:
+vf config byok http://127.0.0.1:1234/v1 lm-studio qwen2.5-coder-14b
+
+# Example C — Inspect active model configuration anytime:
+vf config status
+
+# 2. Run reasoning & launch VectorForce Studio on http://127.0.0.1:3210
+vf reason --task auth-module
+vf studio`
+    }
+  };
+
+  const llmTabBtns = document.querySelectorAll('[data-llm-tab]');
+  const llmCodeTitle = document.getElementById('llm-code-title');
+  const llmCodePre = document.getElementById('llm-code-pre');
+  const llmCopyBtn = document.getElementById('llm-copy-btn');
+
+  llmTabBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-llm-tab');
+      const item = llmProviderConfigs[key];
+      if (!item) return;
+
+      llmTabBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (llmCodeTitle) llmCodeTitle.textContent = item.label;
+      if (llmCodePre) llmCodePre.textContent = item.code;
+      if (llmCopyBtn) llmCopyBtn.setAttribute('data-copy', item.code);
+    });
+  });
 })();
 
