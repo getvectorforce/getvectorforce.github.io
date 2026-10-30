@@ -639,43 +639,46 @@ npx vectorforce status
             <div class="install-step-card" id="step-5">
               <div class="install-step-header">
                 <span class="install-step-badge">STEP 5</span>
-                <h3>Configure AI Memory Models (Ollama, Muse, OpenRouter, OpenAI, Anthropic, BYOK) &amp; Launch Studio</h3>
+                <h3>Configure AI Memory Models (Meta Muse &amp; Muse Spark Open 1st Priority + Fireworks, Ollama, OpenRouter, OpenAI, Anthropic, BYOK)</h3>
               </div>
               <p>
-                VectorForce’s <code>vf reason</code> engine works <strong>100% locally with Ollama by default</strong>, or connects to any cloud model provider (Meta Muse, OpenRouter, OpenAI, Anthropic, or any custom BYOK endpoint). You can also configure models visually inside <strong>VectorForce Studio</strong> (<code>vf studio</code> → Settings):
+                Built for the <strong>Meta Muse Hackathon</strong>: VectorForce makes <strong>Meta Muse (<code>muse-spark-1.3</code>)</strong> and the open-weights <strong>Meta Muse Spark Open (<code>muse-spark-open</code> • 1M token context window)</strong> its <strong>#1 priority reasoning models</strong>—accessible directly via Meta API, <strong>Fireworks AI</strong>, <strong>OpenRouter</strong>, or <strong>Local Ollama</strong>:
               </p>
 
               <!-- Model Provider Interactive Tabs -->
               <div class="harness-tabs" id="llm-provider-tabs">
-                <button class="harness-tab-btn active" type="button" data-llm-tab="ollama">🏠 Local Ollama (Default)</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="muse">🦙 Meta Muse / Llama</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="openrouter">🌐 OpenRouter (Multi-Model)</button>
+                <button class="harness-tab-btn active" type="button" data-llm-tab="muse">🦙 Meta Muse (1st Priority)</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="fireworks">🔥 Fireworks AI (muse-spark-open)</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="openrouter">🌐 OpenRouter (meta/muse-spark-open)</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="ollama">🏠 Local Ollama (Offline)</button>
                 <button class="harness-tab-btn" type="button" data-llm-tab="openai">◈ OpenAI / Codex</button>
                 <button class="harness-tab-btn" type="button" data-llm-tab="anthropic">✦ Anthropic Claude</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="byok">🔑 Custom BYOK (Groq / vLLM / LM Studio)</button>
+                <button class="harness-tab-btn" type="button" data-llm-tab="byok">🔑 Any Custom BYOK</button>
               </div>
 
               <div class="code-window">
                 <div class="code-window-header">
-                  <span id="llm-code-title">Local Ollama — 100% Offline &amp; Zero API Key Required (Default)</span>
-                  <button class="copy-chip" id="llm-copy-btn" data-copy="vf config ollama llama3.1:8b && vf reason --task auth-module && vf studio">Copy</button>
+                  <span id="llm-code-title">Meta Muse Direct API + Open-Source Muse Spark Open (1st Priority Default)</span>
+                  <button class="copy-chip" id="llm-copy-btn" data-copy="vf config muse <YOUR_API_KEY> && vf reason --task auth-module && vf studio">Copy</button>
                 </div>
-                <pre class="code-pre" id="llm-code-pre"># 1. Pull any local model in Ollama (llama3.1:8b, qwen2.5-coder, deepseek-r1)
-ollama pull llama3.1:8b
-
-# 2. Configure VectorForce to use Local Ollama (default on http://127.0.0.1:11434)
-vf config ollama llama3.1:8b
-
-# 3. Synthesize AI Engineering Memory narrative for your active task
+                <pre class="code-pre" id="llm-code-pre"># Option A: Configure Meta Muse Direct API (api.meta.ai/v1 • muse-spark-1.3)
+vf config muse &lt;YOUR_API_KEY&gt;
 vf reason --task auth-module
 
-# 4. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+# Option B: Use Open-Weights "Muse Spark Open" (1M Context) via Fireworks AI:
+vf config fireworks &lt;YOUR_FIREWORKS_API_KEY&gt; accounts/fireworks/models/muse-spark-open
+vf reason --task auth-module
+
+# Option C: Use "Muse Spark Open" via OpenRouter:
+vf config openrouter &lt;YOUR_OPENROUTER_API_KEY&gt; meta/muse-spark-open
+
+# Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
 vf studio</pre>
               </div>
 
               <div style="margin-top: 16px; padding: 14px 18px; border-radius: 10px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.88rem; color: var(--text-secondary);">
                 <strong style="color: #818cf8;">🖥️ Configure Visually in VectorForce Studio:</strong>
-                Run <code>vf studio</code> (opens <code>http://127.0.0.1:3210</code>) and click the <strong>Settings</strong> tab in the sidebar to switch providers, paste your API key, or override the model name in `.vectorforce/config.json` with one click.
+                Run <code>vf studio</code> (opens <code>http://127.0.0.1:3210</code>) and click the <strong>Settings</strong> tab in the sidebar to switch between <strong>Meta Muse</strong>, <strong>Fireworks AI (<code>muse-spark-open</code>)</strong>, <strong>OpenRouter</strong>, <strong>Ollama</strong>, <strong>OpenAI</strong>, or <strong>Anthropic</strong>.
                 Need deterministic output with zero LLM calls? Run <code>vf reason --task auth-module --raw</code>.
               </div>
             </div>

@@ -339,50 +339,67 @@ VF_HARNESS = "codex"`
 
   /* ------------------------------------------------------------------------
      6. Installation Guide Step 5 — External Model Provider Switcher
-        (Local Ollama, Meta Muse, OpenRouter, OpenAI, Anthropic, Custom BYOK)
+        (Meta Muse 1st Priority, Fireworks AI muse-spark-open, OpenRouter, Ollama, OpenAI, Anthropic, BYOK)
      ------------------------------------------------------------------------ */
   const llmProviderConfigs = {
-    ollama: {
-      label: 'Local Ollama — 100% Offline & Zero API Key Required (Default)',
-      code: `# 1. Pull any local model in Ollama (llama3.1:8b, qwen2.5-coder, deepseek-r1)
-ollama pull llama3.1:8b
-
-# 2. Configure VectorForce to use Local Ollama (default on http://127.0.0.1:11434)
-vf config ollama llama3.1:8b
-
-# 3. Synthesize AI Engineering Memory narrative for your active task
+    muse: {
+      label: 'Meta Muse Direct API + Open-Source Muse Spark Open (1st Priority Default)',
+      code: `# Option A: Configure Meta Muse Direct API (api.meta.ai/v1 • muse-spark-1.3)
+vf config muse <YOUR_API_KEY>
 vf reason --task auth-module
 
-# 4. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+# Option B: Use Open-Weights "Muse Spark Open" (1M Context) via Fireworks AI:
+vf config fireworks <YOUR_FIREWORKS_API_KEY> accounts/fireworks/models/muse-spark-open
+vf reason --task auth-module
+
+# Option C: Use "Muse Spark Open" via OpenRouter:
+vf config openrouter <YOUR_OPENROUTER_API_KEY> meta/muse-spark-open
+
+# Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
 vf studio`
     },
-    muse: {
-      label: 'Meta Muse / Llama API (Responses API at api.meta.ai/v1)',
-      code: `# 1. Configure Meta Muse API key (defaults to model: muse-spark-1.3)
-vf config muse <YOUR_META_MUSE_API_KEY>
+    fireworks: {
+      label: 'Fireworks AI — Native Open-Weights Meta "Muse Spark Open" (1M Token Context)',
+      code: `# 1. Configure Fireworks AI (defaults to accounts/fireworks/models/muse-spark-open)
+vf config fireworks <YOUR_FIREWORKS_API_KEY>
 
-# Optional: Specify a custom Meta Muse / Llama model
-vf config muse <YOUR_META_MUSE_API_KEY> muse-spark-1.3
+# Or explicitly specify Meta Muse Spark Open or Llama 3.3 70B on Fireworks:
+vf config fireworks <YOUR_FIREWORKS_API_KEY> accounts/fireworks/models/muse-spark-open
+vf config fireworks <YOUR_FIREWORKS_API_KEY> accounts/fireworks/models/llama-v3p3-70b-instruct
 
-# 2. Reason over task checkpoints, code symbols & workspace drift
+# 2. Reason over active task memory + 1M token codebase context
 vf reason --task auth-module
 
 # 3. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
 vf studio`
     },
     openrouter: {
-      label: 'OpenRouter — Access DeepSeek, Claude, Llama 3.3, Gemini & 200+ Models',
-      code: `# 1. Configure OpenRouter API key (defaults to deepseek/deepseek-v4.1-flash-1017)
-vf config openrouter <YOUR_OPENROUTER_API_KEY>
+      label: 'OpenRouter — Meta Muse Spark Open (meta/muse-spark-open), DeepSeek, Claude & 200+ Models',
+      code: `# 1. Use Open-Source Meta Muse Spark Open on OpenRouter (1M token context):
+vf config openrouter <YOUR_OPENROUTER_API_KEY> meta/muse-spark-open
 
-# Or choose any OpenRouter model (Claude, Llama 3.3, DeepSeek, Qwen):
+# Or use DeepSeek v4.1 Flash / Llama 3.3 70B / Claude 3.7 Sonnet:
+vf config openrouter <YOUR_OPENROUTER_API_KEY> deepseek/deepseek-v4.1-flash-1017
 vf config openrouter <YOUR_OPENROUTER_API_KEY> meta-llama/llama-3.3-70b-instruct
-vf config openrouter <YOUR_OPENROUTER_API_KEY> anthropic/claude-3.7-sonnet
 
 # 2. Run AI Memory Reasoning (or override model per-run with --model)
-vf reason --task auth-module --model deepseek/deepseek-v4.1-flash-1017
+vf reason --task auth-module --model meta/muse-spark-open
 
 # 3. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
+vf studio`
+    },
+    ollama: {
+      label: 'Local Ollama — 100% Offline & Zero API Key Required',
+      code: `# 1. Pull any local open-weights model in Ollama (llama3.1:8b, qwen2.5-coder, deepseek-r1)
+ollama pull llama3.1:8b
+
+# 2. Configure VectorForce to use Local Ollama (http://127.0.0.1:11434)
+vf config ollama llama3.1:8b
+
+# 3. Synthesize AI Engineering Memory narrative for your active task
+vf reason --task auth-module
+
+# 4. Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
 vf studio`
     },
     openai: {
@@ -414,18 +431,18 @@ vf reason --task auth-module
 vf studio`
     },
     byok: {
-      label: 'Custom BYOK — Groq, Together AI, LM Studio, vLLM, Fireworks, Azure',
-      code: `# 1. Connect ANY OpenAI-compatible endpoint (Groq, Together, LM Studio, vLLM):
+      label: 'Custom BYOK — Fireworks, Groq, Together AI, LM Studio, vLLM, Azure',
+      code: `# 1. Connect ANY OpenAI-compatible endpoint (Fireworks, Groq, Together, LM Studio, vLLM):
 # Syntax: vf config byok <BASE_URL> <API_KEY> <MODEL>
 
-# Example A — Groq Cloud (Ultra-fast Llama 3.3 70B):
+# Example A — Fireworks AI (Meta Muse Spark Open):
+vf config byok https://api.fireworks.ai/inference/v1 <FIREWORKS_KEY> accounts/fireworks/models/muse-spark-open
+
+# Example B — Groq Cloud (Ultra-fast Llama 3.3 70B):
 vf config byok https://api.groq.com/openai/v1 <GROQ_API_KEY> llama-3.3-70b-versatile
 
-# Example B — Local LM Studio / vLLM Server:
+# Example C — Local LM Studio / vLLM Server:
 vf config byok http://127.0.0.1:1234/v1 lm-studio qwen2.5-coder-14b
-
-# Example C — Inspect active model configuration anytime:
-vf config status
 
 # 2. Run reasoning & launch VectorForce Studio on http://127.0.0.1:3210
 vf reason --task auth-module
