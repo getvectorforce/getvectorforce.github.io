@@ -469,5 +469,190 @@ vf studio`
       if (llmCopyBtn) llmCopyBtn.setAttribute('data-copy', item.code);
     });
   });
+
+  /* ------------------------------------------------------------------------
+     7. VectorForce Cloud Edition (Post-Diwali Nov 15 Launch) Preview & Interest Poll
+     ------------------------------------------------------------------------ */
+  const cloudPreviewConfigs = {
+    mcp: {
+      label: 'Zero-Install Cloud Subscription MCP (.mcp.json / Antigravity / Muse)',
+      code: `{
+  "mcpServers": {
+    "vectorforce-cloud": {
+      "serverUrl": "https://mcp.vectorforce.ai/v1/sse",
+      "headers": {
+        "Authorization": "Bearer vf_live_sub_98a7bc65...",
+        "X-VF-Project-Id": "proj_bistroforce_prod",
+        "X-VF-Developer": "rahul@company.com"
+      }
+    }
+  }
+}`
+    },
+    sync: {
+      label: 'Two-Machine Context Sync & Developer Task Differentiation',
+      code: `# Machine 1 (Office Workstation — Google Antigravity):
+vf task assign pos-billing --dev rahul@company.com --role Backend
+vf checkpoint --task pos-billing --summary "Completed GST engine & API"
+vf push --cloud
+
+# Machine 2 (Home Laptop or Teammate — Claude Code / Meta Muse):
+vf pull --cloud
+# ✔ Pulled latest checkpoint from Machine 1 + reconciled decisions automatically!`
+    },
+    deploy: {
+      label: 'One-Command Cloud / Self-Hosted Service Deployment (vf deploy)',
+      code: `# Deploy the entire VectorForce Multi-Project Hub + PM Interpreter Portal
+# as a live service in 1 command (Docker / Railway / Render / Cloud VPC):
+npx @vectorforce/cloud deploy --target docker --port 443
+
+# ✔ Multi-Project Hub Online: https://vf.yourcompany.com
+# ✔ PM & Customer Interpreter Portal Enabled (Web Login + Jira/Slack Upload)`
+    }
+  };
+
+  const cloudTabBtns = document.querySelectorAll('[data-cloud-tab]');
+  const cloudCodeTitle = document.getElementById('cloud-code-title');
+  const cloudCodePre = document.getElementById('cloud-code-pre');
+  const cloudCopyBtn = document.getElementById('cloud-copy-btn');
+
+  cloudTabBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-cloud-tab');
+      const item = cloudPreviewConfigs[key];
+      if (!item) return;
+
+      cloudTabBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (cloudCodeTitle) cloudCodeTitle.textContent = item.label;
+      if (cloudCodePre) cloudCodePre.textContent = item.code;
+      if (cloudCopyBtn) cloudCopyBtn.setAttribute('data-copy', item.code);
+    });
+  });
+
+  // Interest Level Radio Buttons
+  const interestVoteBtns = document.querySelectorAll('#interest-level-group .vote-option-btn');
+  let selectedInterestLevel = 'Yes - Ready to subscribe on Nov 15 launch';
+
+  interestVoteBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      interestVoteBtns.forEach((b) => {
+        b.classList.remove('selected');
+        const radio = b.querySelector('.vote-radio');
+        if (radio) radio.textContent = '';
+      });
+      btn.classList.add('selected');
+      const activeRadio = btn.querySelector('.vote-radio');
+      if (activeRadio) activeRadio.textContent = '✓';
+      selectedInterestLevel = btn.getAttribute('data-interest-val') || selectedInterestLevel;
+    });
+  });
+
+  // Feature Check Pills
+  const featurePills = document.querySelectorAll('#cloud-feature-pills .feature-check-pill');
+  featurePills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      pill.classList.toggle('active');
+    });
+  });
+
+  // Interest Counter initialization
+  const interestCounterEl = document.getElementById('cloud-interest-counter');
+  let savedCount = parseInt(localStorage.getItem('vf_cloud_interest_count') || '48', 10);
+  if (interestCounterEl) {
+    interestCounterEl.textContent = `🔥 ${savedCount} Teams Interested`;
+  }
+
+  // Form Submission
+  const cloudForm = document.getElementById('cloud-interest-form');
+  const cloudSuccessBox = document.getElementById('cloud-interest-success');
+  const cloudSubmitBtn = document.getElementById('cloud-submit-btn');
+  const githubConfirmLink = document.getElementById('cloud-github-confirm');
+  const mailtoConfirmLink = document.getElementById('cloud-mailto-confirm');
+
+  if (cloudForm) {
+    cloudForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = (document.getElementById('cloud-user-name')?.value || '').trim();
+      const email = (document.getElementById('cloud-user-email')?.value || '').trim();
+      const role = document.getElementById('cloud-user-role')?.value || 'Developer';
+      const teamSize = document.getElementById('cloud-team-size')?.value || 'Solo Dev';
+      const notes = (document.getElementById('cloud-user-notes')?.value || '').trim();
+
+      const chosenFeatures = Array.from(
+        document.querySelectorAll('#cloud-feature-pills .feature-check-pill.active')
+      ).map((el) => el.getAttribute('data-feature-pill'));
+
+      const payload = {
+        _subject: `[VectorForce Cloud Nov 15 Interest] ${name} (${role})`,
+        launch_window: 'Post-Diwali (After 15 November 2026)',
+        interest_level: selectedInterestLevel,
+        requested_features: chosenFeatures.join(', ') || 'All Cloud Features',
+        role,
+        team_size: teamSize,
+        name_and_company: name,
+        email,
+        notes: notes || 'N/A',
+        submitted_at: new Date().toISOString()
+      };
+
+      if (cloudSubmitBtn) {
+        cloudSubmitBtn.disabled = true;
+        cloudSubmitBtn.innerHTML = '<span>Recording Your Interest...</span>';
+      }
+
+      // Save locally & increment counter
+      savedCount += 1;
+      localStorage.setItem('vf_cloud_interest_count', String(savedCount));
+      localStorage.setItem('vf_cloud_last_submission', JSON.stringify(payload));
+      if (interestCounterEl) {
+        interestCounterEl.textContent = `🔥 ${savedCount} Teams Interested`;
+      }
+
+      // Prepare GitHub Issue & mailto links for 100% guaranteed delivery
+      const issueTitle = encodeURIComponent(`[Cloud Launch Interest - Nov 15] ${name} (${role})`);
+      const issueBody = encodeURIComponent(
+        `### VectorForce Cloud & Team Subscription — Customer Interest\n` +
+        `- **Launch Target:** Post-Diwali (After 15 November 2026)\n` +
+        `- **Interest Level:** ${payload.interest_level}\n` +
+        `- **Name / Company:** ${payload.name_and_company}\n` +
+        `- **Email:** ${payload.email}\n` +
+        `- **Role:** ${payload.role}\n` +
+        `- **Team / Machines:** ${payload.team_size}\n` +
+        `- **Top Requested Cloud Features:** ${payload.requested_features}\n` +
+        `- **Additional Notes:** ${payload.notes}\n`
+      );
+      if (githubConfirmLink) {
+        githubConfirmLink.href = `https://github.com/getvectorforce/VectorForce/issues/new?title=${issueTitle}&body=${issueBody}`;
+      }
+      if (mailtoConfirmLink) {
+        mailtoConfirmLink.href = `mailto:omprakash@arkainformations.com?subject=${issueTitle}&body=${issueBody}`;
+      }
+
+      // Send via FormSubmit AJAX endpoint in background
+      try {
+        await fetch('https://formsubmit.co/ajax/omprakash@arkainformations.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+      } catch (_) {
+        // Fallback links are shown below
+      }
+
+      if (cloudSubmitBtn) {
+        cloudSubmitBtn.innerHTML = '<span>✓ Reserved for Post-Diwali Launch (After 15 Nov)!</span>';
+        cloudSubmitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+      }
+      if (cloudSuccessBox) {
+        cloudSuccessBox.style.display = 'block';
+      }
+    });
+  }
 })();
 

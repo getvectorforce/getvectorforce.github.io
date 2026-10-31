@@ -33,7 +33,13 @@
         <li><a href="#why-vectorforce">Why VectorForce</a></li>
         <li><a href="#demo-video">Demo Video</a></li>
         <li><a href="#studio-preview">Studio UI</a></li>
-        <li><a href="#installation">Installation Guide</a></li>
+        <li><a href="#installation">Free OSS Setup</a></li>
+        <li>
+          <a href="#cloud-edition" class="nav-cloud-pill">
+            <span>☁️ Cloud Edition</span>
+            <span class="cloud-badge-mini">Nov 15</span>
+          </a>
+        </li>
         <li><a href="#mcp-tools">MCP Tools</a></li>
       </ul>
 
@@ -83,15 +89,15 @@
 
         <div class="hero-cta-row">
           <a href="#installation" class="btn btn-primary btn-lg">
-            <span>Installation Guide</span>
+            <span>Free OSS Installation</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#cloud-edition" class="btn btn-secondary btn-lg" style="border-color: rgba(245, 158, 11, 0.55); background: linear-gradient(135deg, rgba(245, 158, 11, 0.16), rgba(99, 102, 241, 0.2)); color: #fde68a;">
+            <span>☁️ Cloud &amp; Team Edition (Launching Nov 15)</span>
           </a>
           <a href="#demo-video" class="btn btn-secondary btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             <span>Watch Demo Video</span>
-          </a>
-          <a href="https://github.com/getvectorforce/VectorForce" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
-            <span>View on GitHub</span>
           </a>
         </div>
 
@@ -470,10 +476,31 @@ $ claude / command-code
       <div class="container">
         <div class="section-header">
           <span class="eyebrow">Step-by-Step Setup</span>
-          <h2 class="section-title">Installation &amp; Quickstart Guide</h2>
+          <h2 class="section-title">Installation &amp; Quickstart Guide (Free Open-Source Edition)</h2>
           <p class="section-subtitle">
-            Get VectorForce running in under 60 seconds. Requires <strong>Node.js 22.5.0+</strong> (uses native built-in <code>node:sqlite</code> with zero external dependencies).
+            Get the local-first Open-Source Edition running in under 60 seconds (requires <strong>Node.js 22.5.0+</strong>). Need Multi-Project Cloud Sync, Developer Task Assignment, or the PM &amp; Customer Web Portal? <a href="#cloud-edition" style="color: #fbbf24; font-weight: 700; text-decoration: underline;">Explore VectorForce Cloud (Launching Post-Diwali • After Nov 15) →</a>
           </p>
+        </div>
+
+        <!-- Edition Switcher Banner: Free Open Source vs Cloud Subscription -->
+        <div class="edition-switcher-banner" role="region" aria-label="Choose VectorForce Edition">
+          <a href="#step-1" class="edition-switch-card oss-active">
+            <div>
+              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #34d399; font-weight: 700;">✓ AVAILABLE NOW • MIT / APACHE-2.0</div>
+              <div style="font-size: 1.04rem; font-weight: 800; color: var(--text-primary); margin-top: 2px;">Free Open-Source CLI + Local Studio</div>
+              <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px;">Single machine • Local SQLite WAL • 9 MCP tools</div>
+            </div>
+            <span class="brand-badge" style="background: rgba(16,185,129,0.2); color: #34d399;">Free</span>
+          </a>
+
+          <a href="#cloud-edition" class="edition-switch-card cloud-promo">
+            <div>
+              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">🪔 LAUNCHING POST-DIWALI • AFTER 15 NOV</div>
+              <div style="font-size: 1.04rem; font-weight: 800; color: var(--text-primary); margin-top: 2px;">☁️ VectorForce Cloud &amp; Team Subscription</div>
+              <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px;">Multi-Project Hub • 2-Machine Sync • PM Portal • 1-Click Deploy</div>
+            </div>
+            <span class="cloud-badge-mini">Are You Interested? →</span>
+          </a>
         </div>
 
         <div class="install-layout">
@@ -680,6 +707,223 @@ vf studio</pre>
                 <strong style="color: #818cf8;">🖥️ Configure Visually in VectorForce Studio:</strong>
                 Run <code>vf studio</code> (opens <code>http://127.0.0.1:3210</code>) and click the <strong>Settings</strong> tab in the sidebar to switch between <strong>Meta Muse</strong>, <strong>Fireworks AI (<code>muse-spark-open</code>)</strong>, <strong>OpenRouter</strong>, <strong>Ollama</strong>, <strong>OpenAI</strong>, or <strong>Anthropic</strong>.
                 Need deterministic output with zero LLM calls? Run <code>vf reason --task auth-module --raw</code>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VectorForce Cloud & Team Subscription (Post-Diwali Launch • After 15 Nov)
+         ========================================================================== -->
+    <section id="cloud-edition" class="cloud-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="diwali-launch-banner">
+            <span>🪔 POST-DIWALI CLOUD LAUNCH</span>
+            <span>•</span>
+            <span>LAUNCHING AFTER 15 NOVEMBER 2026</span>
+          </div>
+          <h2 class="section-title">
+            <span class="gradient-text">VectorForce Cloud &amp; Team Subscription</span>
+          </h2>
+          <p class="section-subtitle">
+            The Open-Source CLI is built for a single developer on one machine. <strong>VectorForce Cloud</strong> is our dedicated commercial platform—giving engineering teams, Product Managers (PMs), and customers a hosted Multi-Project Hub, live Cross-Machine Context Sync, a plain-English Executive Interpreter Portal, and One-Command Cloud Deployment.
+          </p>
+        </div>
+
+        <div class="cloud-grid">
+          <!-- Left Column: What's Inside VectorForce Cloud + Code/Architecture Preview -->
+          <div class="cloud-Pitch-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+              <span class="eyebrow" style="margin-bottom: 0; color: #fbbf24;">Commercial Subscription Platform</span>
+              <span class="mono" style="font-size: 0.78rem; padding: 4px 10px; border-radius: 999px; background: rgba(245, 158, 11, 0.16); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.35);">
+                Zero Local Setup Needed • Just Subscribe &amp; Connect
+              </span>
+            </div>
+
+            <h3 style="font-size: 1.45rem; font-weight: 800; margin-bottom: 10px;">
+              Everything Beyond a Single Machine — Built for Teams, PMs &amp; Customers
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.94rem;">
+              No manual database setup or file copying. Subscribe, grab your <code>vf_live_...</code> key, and unlock seamless multi-developer collaboration:
+            </p>
+
+            <div class="cloud-feature-list">
+              <div class="cloud-feature-item">
+                <h4><span>🗂️</span> Available Projects Hub</h4>
+                <p>Switch across all company &amp; client projects from a single web portal—each with isolated policies, health scores, and decision ledgers.</p>
+              </div>
+
+              <div class="cloud-feature-item">
+                <h4><span>👥</span> Developer Task Differentiation</h4>
+                <p>Assign tasks per developer (<code>Assignee</code>, <code>Role: Frontend/Backend/QA</code>, <code>Priority</code>) with scope locks so agents never collide.</p>
+              </div>
+
+              <div class="cloud-feature-item">
+                <h4><span>🔄</span> Two-Machine Live Context Sync</h4>
+                <p>Move between your office workstation and laptop—or sync with teammates via <code>vf push</code> / <code>vf pull</code> without manual bundle files.</p>
+              </div>
+
+              <div class="cloud-feature-item">
+                <h4><span>📊</span> PM &amp; Customer Interpreter Portal</h4>
+                <p>PMs &amp; clients log in on the web (zero CLI needed) to view plain-English progress, decision rationale, and upload to Jira, Linear, Notion, or Slack.</p>
+              </div>
+
+              <div class="cloud-feature-item">
+                <h4><span>🔑</span> Subscription Cloud MCP</h4>
+                <p>Connect Antigravity, Claude Code, Command Code, Meta Muse, and Codex via remote <code>serverUrl</code> using your subscription API key.</p>
+              </div>
+
+              <div class="cloud-feature-item">
+                <h4><span>🚀</span> One-Command Service Deploy</h4>
+                <p>Prefer self-hosting in your own cloud VPC? Run <code>vf deploy</code> to spin up the full multi-project hub on Docker, Railway, or Render in 1 command.</p>
+              </div>
+            </div>
+
+            <!-- Interactive Preview Tabs for Cloud MCP, PM Interpreter & 1-Command Deploy -->
+            <div class="harness-tabs" id="cloud-preview-tabs" style="margin-top: 18px;">
+              <button class="harness-tab-btn active" type="button" data-cloud-tab="mcp">🔑 Subscription MCP Config</button>
+              <button class="harness-tab-btn" type="button" data-cloud-tab="sync">🔄 2-Machine Sync &amp; Tasks</button>
+              <button class="harness-tab-btn" type="button" data-cloud-tab="deploy">🚀 1-Command Service Deploy</button>
+            </div>
+
+            <div class="code-window">
+              <div class="code-window-header">
+                <span id="cloud-code-title">Zero-Install Cloud Subscription MCP (.mcp.json / Antigravity / Muse)</span>
+                <button class="copy-chip" id="cloud-copy-btn" data-copy="{ &quot;mcpServers&quot;: { &quot;vectorforce-cloud&quot;: { &quot;serverUrl&quot;: &quot;https://mcp.vectorforce.ai/v1/sse&quot;, &quot;headers&quot;: { &quot;Authorization&quot;: &quot;Bearer vf_live_sub_98a7bc65...&quot; } } } }">Copy</button>
+              </div>
+              <pre class="code-pre" id="cloud-code-pre">{
+  "mcpServers": {
+    "vectorforce-cloud": {
+      "serverUrl": "https://mcp.vectorforce.ai/v1/sse",
+      "headers": {
+        "Authorization": "Bearer vf_live_sub_98a7bc65...",
+        "X-VF-Project-Id": "proj_bistroforce_prod",
+        "X-VF-Developer": "rahul@company.com"
+      }
+    }
+  }
+}</pre>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Customer Interest & Validation Poll ("Are You Interested?") -->
+          <div class="cloud-interest-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span class="cloud-badge-mini" style="font-size: 0.72rem; padding: 4px 10px;">CUSTOMER VALIDATION &amp; EARLY ACCESS</span>
+              <span class="mono" id="cloud-interest-counter" style="font-size: 0.78rem; color: #34d399; font-weight: 700;">
+                🔥 48 Teams Interested
+              </span>
+            </div>
+
+            <h3 style="font-size: 1.38rem; font-weight: 800; margin-bottom: 6px;">
+              Are You Interested in VectorForce Cloud?
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">
+              We are launching the <strong>VectorForce Cloud &amp; Team Subscription</strong> 10 days after Diwali (<strong>right after 15 November 2026</strong>). Tell us if you or your team want early access so we can prioritize your onboarding:
+            </p>
+
+            <form id="cloud-interest-form">
+              <!-- Question 1: Are you ready to take the Cloud Version? -->
+              <div class="cloud-form-group">
+                <label>1. Are you interested in the Cloud Subscription launching after Nov 15?</label>
+                <div class="vote-options-grid" id="interest-level-group">
+                  <button type="button" class="vote-option-btn selected" data-interest-val="Yes - Ready to subscribe on Nov 15 launch">
+                    <span>🚀 <strong>Yes!</strong> I want to subscribe when it launches after 15 Nov</span>
+                    <span class="vote-radio">✓</span>
+                  </button>
+                  <button type="button" class="vote-option-btn" data-interest-val="Yes - Want Early Beta / Team Pilot">
+                    <span>🧪 <strong>Yes!</strong> Give my team Early Beta / Pilot access before launch</span>
+                    <span class="vote-radio"></span>
+                  </button>
+                  <button type="button" class="vote-option-btn" data-interest-val="Interested in One-Command Self-Hosted Service">
+                    <span>🏢 <strong>Yes —</strong> Interested in the 1-Command Self-Hosted Service</span>
+                    <span class="vote-radio"></span>
+                  </button>
+                  <button type="button" class="vote-option-btn" data-interest-val="Exploring - Notify me with pricing & demo">
+                    <span>💡 <strong>Maybe —</strong> Send me pricing &amp; PM Interpreter demo on Nov 15</span>
+                    <span class="vote-radio"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Question 2: Which Cloud features matter most? -->
+              <div class="cloud-form-group">
+                <label>2. Which Cloud features are most critical for you? (Click to select)</label>
+                <div class="feature-check-pills" id="cloud-feature-pills">
+                  <button type="button" class="feature-check-pill active" data-feature-pill="Two-Machine Context Sync">🔄 2-Machine Context Sync</button>
+                  <button type="button" class="feature-check-pill active" data-feature-pill="Multi-Project Switcher Hub">🗂️ Available Projects Hub</button>
+                  <button type="button" class="feature-check-pill active" data-feature-pill="Developer Task Assignment">👥 Developer Task Split</button>
+                  <button type="button" class="feature-check-pill" data-feature-pill="PM & Customer Interpreter Portal">📊 PM &amp; Customer Interpreter</button>
+                  <button type="button" class="feature-check-pill" data-feature-pill="One-Command Cloud Deployment">🚀 1-Command Service Deploy</button>
+                </div>
+              </div>
+
+              <!-- Question 3: Role & Team Size -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div class="cloud-form-group">
+                  <label for="cloud-user-role">3. Your Role</label>
+                  <select id="cloud-user-role" class="cloud-select">
+                    <option value="Developer / Engineer">Developer / Engineer</option>
+                    <option value="Engineering Lead / Architect">Engineering Lead / Architect</option>
+                    <option value="Product Manager (PM)">Product Manager (PM)</option>
+                    <option value="Founder / CTO / Executive">Founder / CTO / Executive</option>
+                    <option value="Agency / Consulting Team">Agency / Consulting Team</option>
+                  </select>
+                </div>
+
+                <div class="cloud-form-group">
+                  <label for="cloud-team-size">4. Team / Machines</label>
+                  <select id="cloud-team-size" class="cloud-select">
+                    <option value="Solo Dev (2+ Machines)">Solo Dev (2+ Machines)</option>
+                    <option value="2 - 5 Developers + PM">2 – 5 Developers + PM</option>
+                    <option value="6 - 20 Engineering Team">6 – 20 Engineering Team</option>
+                    <option value="20+ Enterprise Org">20+ Enterprise Org</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Question 4: Email & Name/Company -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div class="cloud-form-group">
+                  <label for="cloud-user-name">Your Name / Company</label>
+                  <input type="text" id="cloud-user-name" class="cloud-input" placeholder="e.g. Rahul • Acme AI" required />
+                </div>
+
+                <div class="cloud-form-group">
+                  <label for="cloud-user-email">Work Email (For Nov 15 Invite)</label>
+                  <input type="email" id="cloud-user-email" class="cloud-input" placeholder="you@company.com" required />
+                </div>
+              </div>
+
+              <div class="cloud-form-group">
+                <label for="cloud-user-notes">Anything specific you want in the Nov 15 Cloud release? (Optional)</label>
+                <input type="text" id="cloud-user-notes" class="cloud-input" placeholder="e.g. Jira/Linear sync for PMs, GitHub SSO, custom VPC..." />
+              </div>
+
+              <button type="submit" id="cloud-submit-btn" class="btn btn-cloud-submit">
+                <span>🪔 Yes, I’m Interested — Reserve My Nov 15 Cloud Access</span>
+              </button>
+            </form>
+
+            <!-- Confirmation Box (Hidden until submitted) -->
+            <div id="cloud-interest-success" style="display: none; margin-top: 16px; padding: 18px; border-radius: 12px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                <strong style="color: #34d399; font-size: 0.98rem;">🎉 Thank You! Your Cloud Interest is Recorded</strong>
+                <span class="mono" style="font-size: 0.74rem; padding: 3px 8px; border-radius: 6px; background: rgba(16,185,129,0.2); color: #6ee7b7;">PASS: VF-NOV15-EARLY</span>
+              </div>
+              <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 12px;">
+                We’ve logged your interest for the <strong>Post-Diwali Launch (After 15 November 2026)</strong>. Want instant priority onboarding from our core team? Click either option below to send your response directly:
+              </p>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a id="cloud-github-confirm" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.8rem; padding: 8px 14px; border-color: rgba(52, 211, 153, 0.4);">
+                  <span>⚡ 1-Click Confirm via GitHub</span>
+                </a>
+                <a id="cloud-mailto-confirm" href="#" class="btn btn-secondary" style="font-size: 0.8rem; padding: 8px 14px;">
+                  <span>✉️ Send Direct Email Copy</span>
+                </a>
               </div>
             </div>
           </div>
