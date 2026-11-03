@@ -700,7 +700,39 @@ npx @vectorforce/cloud deploy --target docker --port 443
         mailtoConfirmLink.href = `mailto:omprakash@arkainformations.com?subject=${issueTitle}&body=${issueBody}`;
       }
 
-      // Send via FormSubmit AJAX endpoint in background
+      // 1. Send directly to VectorForce Cloud permanent SQLite database
+      let dbLeadId = 'VF-NOV15-EARLY';
+      try {
+        const cloudDbRes = await fetch('https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/api/customer-interest', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name_and_company: name,
+            email,
+            role,
+            team_size: teamSize,
+            interest_level: selectedInterestLevel,
+            requested_features: chosenFeatures.join(', ') || 'All Features',
+            notes: notes || 'N/A'
+          })
+        });
+        if (cloudDbRes.ok) {
+          const cloudDbData = await cloudDbRes.json();
+          if (cloudDbData.interest_id) {
+            dbLeadId = cloudDbData.interest_id.toUpperCase();
+          }
+        }
+      } catch (err) {
+        console.warn('VectorForce Cloud DB lead capture fallback:', err);
+      }
+
+      // Update lead badge in success box with permanent DB Lead ID
+      const leadBadgeEl = document.querySelector('#cloud-interest-success .mono');
+      if (leadBadgeEl) {
+        leadBadgeEl.textContent = `SAVED TO CLOUD DB: ${dbLeadId}`;
+      }
+
+      // 2. Send via FormSubmit AJAX endpoint for email notification in background
       try {
         await fetch('https://formsubmit.co/ajax/omprakash@arkainformations.com', {
           method: 'POST',
@@ -708,7 +740,7 @@ npx @vectorforce/cloud deploy --target docker --port 443
             'Content-Type': 'application/json',
             Accept: 'application/json'
           },
-          body: JSON.stringify(payload)
+          body: JSON.stringify({ ...payload, db_lead_id: dbLeadId })
         });
       } catch (_) {
         // Fallback links are shown below
