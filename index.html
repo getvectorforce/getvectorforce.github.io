@@ -26,7 +26,7 @@
       <a href="#" class="brand">
         <img src="./favicon.svg" alt="VectorForce Logo" class="brand-logo" />
         <span>VectorForce</span>
-        <span class="brand-badge">v0.1.0</span>
+        <span class="brand-badge">v0.3.3</span>
       </a>
 
       <ul class="nav-links">
@@ -37,7 +37,7 @@
         <li>
           <a href="#cloud-edition" class="nav-cloud-pill">
             <span>☁️ Cloud Edition</span>
-            <span class="cloud-badge-mini">Nov 15</span>
+            <span class="cloud-badge-mini">Live</span>
           </a>
         </li>
         <li><a href="#mcp-tools">MCP Tools</a></li>
@@ -57,16 +57,57 @@
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </svg>
         </button>
-        <a href="https://github.com/getvectorforce/VectorForce" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        <a href="https://github.com/getvectorforce/VectorForce" target="_blank" rel="noopener noreferrer" class="btn btn-secondary nav-github-btn">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
           </svg>
           <span>GitHub</span>
         </a>
-        <a href="#installation" class="btn btn-primary">Get Started</a>
+        <a href="#installation" class="btn btn-primary nav-cta-btn">Get Started</a>
+        <button id="mobile-menu-btn" class="icon-btn mobile-menu-btn" aria-label="Open navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Responsive Mobile Off-Canvas Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="#" class="brand">
+        <img src="./favicon.svg" alt="VectorForce Logo" class="brand-logo" />
+        <span>VectorForce</span>
+        <span class="brand-badge">v0.3.3</span>
+      </a>
+      <button class="icon-btn" id="mobile-close-btn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#why-vectorforce" class="mobile-nav-link">Why VectorForce</a></li>
+      <li><a href="#demo-video" class="mobile-nav-link">Demo Video</a></li>
+      <li><a href="#studio-preview" class="mobile-nav-link">Studio UI</a></li>
+      <li><a href="#installation" class="mobile-nav-link">Free OSS Setup</a></li>
+      <li><a href="#cloud-edition" class="mobile-nav-link" style="color: #fbbf24;">☁️ Cloud Edition (Live)</a></li>
+      <li><a href="#mcp-tools" class="mobile-nav-link">MCP Tools</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="https://github.com/getvectorforce/VectorForce" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+        View on GitHub
+      </a>
+      <a href="#installation" class="btn btn-primary mobile-nav-link" style="width: 100%; justify-content: center;">
+        Get Started Free
+      </a>
+    </div>
+  </div>
+  <div class="mobile-backdrop" id="mobile-backdrop" aria-hidden="true"></div>
 
   <!-- Hero Section -->
   <main>
@@ -84,7 +125,7 @@
         </h1>
 
         <p class="hero-subtitle">
-          Git tracks your source code. <strong>VectorForce</strong> tracks your AI coding agent’s architectural decisions, non-negotiable constraints, and verifiable workspace evidence—so you can switch seamlessly between <strong>Google Antigravity</strong>, <strong>Command Code</strong>, <strong>Meta Muse</strong>, and <strong>OpenAI Codex</strong> without losing a single thought.
+          Git tracks your source code. <strong>VectorForce</strong> tracks your AI coding agent’s architectural decisions, non-negotiable constraints, and verifiable workspace evidence—so you can switch seamlessly between <strong>Google Antigravity</strong>, <strong>Meta Muse</strong>, <strong>Claude Code</strong>, <strong>Cursor</strong>, <strong>Windsurf</strong>, <strong>GitHub Copilot</strong>, and <strong>OpenAI Codex</strong> without losing a single thought.
         </p>
 
         <div class="hero-cta-row">
@@ -92,8 +133,8 @@
             <span>Free OSS Installation</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a href="#cloud-edition" class="btn btn-secondary btn-lg" style="border-color: rgba(245, 158, 11, 0.55); background: linear-gradient(135deg, rgba(245, 158, 11, 0.16), rgba(99, 102, 241, 0.2)); color: #fde68a;">
-            <span>☁️ Cloud &amp; Team Edition (Launching Nov 15)</span>
+          <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/?project=proj-meta-e2ee" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="border-color: rgba(245, 158, 11, 0.55); background: linear-gradient(135deg, rgba(245, 158, 11, 0.16), rgba(99, 102, 241, 0.2)); color: #fde68a;">
+            <span>☁️ Live Cloud Demo (Zero-Knowledge) ↗</span>
           </a>
           <a href="#demo-video" class="btn btn-secondary btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -115,9 +156,13 @@
           <span class="harness-strip-label">Works natively via MCP with:</span>
           <div class="harness-badges">
             <span class="harness-chip">⚡ Google Antigravity</span>
-            <span class="harness-chip">⌘ Command Code</span>
             <span class="harness-chip">🦙 Meta Muse</span>
-            <span class="harness-chip">◈ OpenAI Codex CLI</span>
+            <span class="harness-chip">⌘ Claude / Command Code</span>
+            <span class="harness-chip">◈ OpenAI Codex</span>
+            <span class="harness-chip">🖱️ Cursor IDE</span>
+            <span class="harness-chip">🌊 Windsurf Cascade</span>
+            <span class="harness-chip">🐙 GitHub Copilot</span>
+            <span class="harness-chip">⚡ Kiro IDE</span>
           </div>
         </div>
       </div>
@@ -580,32 +625,52 @@ $ claude / command-code
                 <strong>How MCP actually works:</strong> You <em>never</em> have to run <code>vf mcp</code> manually in a terminal! Instead, each AI coding tool reads its own configuration file and automatically spawns VectorForce in the background over <code>stdio</code>.
               </p>
 
-              <!-- Clear File Mapping Explanation -->
+              <!-- Clear File Mapping Explanation for all 8 supported AI coding agents -->
               <div class="flow-steps" style="margin-bottom: 20px;">
                 <div class="flow-step">
                   <span class="flow-icon" style="background:rgba(99,102,241,0.2);color:#818cf8;">⚡</span>
                   <div><strong>Google Antigravity:</strong> Reads <code>.agents/mcp_config.json</code> (workspace) and <code>~/.gemini/antigravity/mcp_config.json</code> (global IDE).</div>
                 </div>
                 <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(16,185,129,0.2);color:#34d399;">⌘</span>
-                  <div><strong>Claude Code &amp; Command Code:</strong> Automatically detect and read <code>.mcp.json</code> in your project root (or via <code>claude mcp add</code> / <code>cmd mcp add</code>).</div>
-                </div>
-                <div class="flow-step">
                   <span class="flow-icon" style="background:rgba(192,132,252,0.2);color:#c084fc;">🦙</span>
                   <div><strong>Meta Muse:</strong> Reads <code>~/.config/muse/settings.json</code> and workspace <code>.muse/mcp_config.json</code>.</div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(16,185,129,0.2);color:#34d399;">⌘</span>
+                  <div><strong>Claude Code &amp; Command Code:</strong> Auto-detects <code>.mcp.json</code> and <code>commandcode.json</code> in project root.</div>
                 </div>
                 <div class="flow-step">
                   <span class="flow-icon" style="background:rgba(56,189,248,0.2);color:#38bdf8;">◈</span>
                   <div><strong>OpenAI Codex CLI:</strong> Reads <code>.codex/config.toml</code> and <code>~/.codex/config.toml</code>.</div>
                 </div>
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(244,63,94,0.2);color:#fb7185;">🖱️</span>
+                  <div><strong>Cursor IDE:</strong> Reads <code>.cursor/mcp.json</code> and steers via <code>.cursorrules</code>.</div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(6,182,212,0.2);color:#22d3ee;">🌊</span>
+                  <div><strong>Windsurf Cascade:</strong> Reads <code>.windsurf/mcp_config.json</code> and <code>.windsurfrules</code>.</div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(168,85,247,0.2);color:#c084fc;">🐙</span>
+                  <div><strong>GitHub Copilot:</strong> Reads <code>.vscode/mcp.json</code> (official <code>servers</code> key) and <code>.github/copilot-instructions.md</code>.</div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-icon" style="background:rgba(245,158,11,0.2);color:#fbbf24;">⚡</span>
+                  <div><strong>Kiro IDE:</strong> Reads <code>.kiro/settings/mcp.json</code> and <code>kiro.json</code>.</div>
+                </div>
               </div>
 
-              <div class="harness-tabs">
+              <div class="harness-tabs" id="harness-config-tabs">
                 <button class="harness-tab-btn active" type="button" data-harness-tab="all">⚡ All Harnesses (1-Click)</button>
                 <button class="harness-tab-btn" type="button" data-harness-tab="antigravity">Google Antigravity</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="command-code">Claude Code / Command Code</button>
                 <button class="harness-tab-btn" type="button" data-harness-tab="muse">Meta Muse</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="command-code">Claude / Command Code</button>
                 <button class="harness-tab-btn" type="button" data-harness-tab="codex">OpenAI Codex</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="cursor">Cursor IDE</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="windsurf">Windsurf Cascade</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="copilot">GitHub Copilot</button>
+                <button class="harness-tab-btn" type="button" data-harness-tab="kiro">Kiro IDE</button>
               </div>
 
               <div class="code-window">
@@ -613,14 +678,14 @@ $ claude / command-code
                   <span id="harness-code-title">Auto-Configure All Harnesses + Verify with vf status</span>
                   <button class="copy-chip" id="harness-copy-btn" data-copy="npx vectorforce config install all && npx vectorforce status">Copy</button>
                 </div>
-                <pre class="code-pre" id="harness-code-pre"># 1. Auto-configure Antigravity, Claude Code, Command Code, Meta Muse &amp; Codex:
+                <pre class="code-pre" id="harness-code-pre"># 1. Auto-configure Antigravity, Claude Code, Command Code, Meta Muse, Codex, Cursor, Windsurf, Copilot &amp; Kiro:
 npx vectorforce config install all
 
 # 2. Check which MCP config files were created and verify readiness:
 npx vectorforce status
 
 # Note: You do NOT need to run "vf mcp" manually!
-# Each AI tool reads its config file below and spawns the MCP server automatically.</pre>
+# Each AI tool reads its config file and spawns the MCP server automatically.</pre>
               </div>
 
               <div style="margin-top: 16px; padding: 14px 18px; border-radius: 10px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.9rem;">
@@ -715,31 +780,39 @@ vf studio</pre>
     </section>
 
     <!-- ==========================================================================
-         VectorForce Cloud & Team Subscription (Post-Diwali Launch • After 15 Nov)
+         VectorForce Cloud & Team Context Relay (Live Serverless Edition)
          ========================================================================== -->
     <section id="cloud-edition" class="cloud-section">
       <div class="container">
         <div class="section-header">
-          <div class="diwali-launch-banner">
-            <span>🪔 POST-DIWALI CLOUD LAUNCH</span>
+          <div class="diwali-launch-banner" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
+            <span>🚀 VECTORFORCE CLOUD IS LIVE</span>
             <span>•</span>
-            <span>LAUNCHING AFTER 15 NOVEMBER 2026</span>
+            <span>ZERO-KNOWLEDGE SERVERLESS RELAY</span>
           </div>
           <h2 class="section-title">
-            <span class="gradient-text">VectorForce Cloud &amp; Team Subscription</span>
+            <span class="gradient-text">VectorForce Cloud &amp; Remote Context Hub</span>
           </h2>
           <p class="section-subtitle">
-            The Open-Source CLI is built for a single developer on one machine. <strong>VectorForce Cloud</strong> is our dedicated commercial platform—giving engineering teams, Product Managers (PMs), and customers a hosted Multi-Project Hub, live Cross-Machine Context Sync, a plain-English Executive Interpreter Portal, and One-Command Cloud Deployment.
+            The Open-Source CLI is built for a single developer on one machine. <strong>VectorForce Cloud</strong> connects multiple devices (Lenovo, MacBook, Linux) and teams with end-to-end zero-knowledge encryption, live drift detection, and automated cross-agent briefings.
           </p>
+          <div style="display: flex; justify-content: center; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+            <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/?project=proj-meta-e2ee" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 8px 24px -4px rgba(16, 185, 129, 0.4);">
+              <span>🌐 Open Live Cloud Dashboard (Meta AI Showcase) ↗</span>
+            </a>
+            <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/?project=proj-bistro-pos" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <span>📁 Open Restaurant Billing Workspace ↗</span>
+            </a>
+          </div>
         </div>
 
         <div class="cloud-grid">
           <!-- Left Column: What's Inside VectorForce Cloud + Code/Architecture Preview -->
           <div class="cloud-Pitch-card">
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
-              <span class="eyebrow" style="margin-bottom: 0; color: #fbbf24;">Commercial Subscription Platform</span>
-              <span class="mono" style="font-size: 0.78rem; padding: 4px 10px; border-radius: 999px; background: rgba(245, 158, 11, 0.16); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.35);">
-                Zero Local Setup Needed • Just Subscribe &amp; Connect
+              <span class="eyebrow" style="margin-bottom: 0; color: #fbbf24;">Commercial &amp; Cloud Platform</span>
+              <span class="mono" style="font-size: 0.78rem; padding: 4px 10px; border-radius: 999px; background: rgba(16, 185, 129, 0.16); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35);">
+                Live on Modal.com • Zero-Knowledge E2EE
               </span>
             </div>
 

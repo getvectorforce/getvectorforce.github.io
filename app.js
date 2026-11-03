@@ -314,6 +314,75 @@ command = "node"
 args = ["/path/to/bin/vf.js", "mcp"]
 [mcp_servers.vectorforce.env]
 VF_HARNESS = "codex"`
+    },
+    cursor: {
+      label: 'Cursor IDE (.cursor/mcp.json + .cursorrules)',
+      code: `# 1-Command Auto-Setup for Cursor IDE:
+npx vectorforce config install cursor
+
+# What this creates/updates automatically:
+#  • Workspace: .cursor/mcp.json
+#  • Rules:     .cursorrules (Agent continuity steering protocol)
+{
+  "mcpServers": {
+    "vectorforce": {
+      "command": "node",
+      "args": ["/path/to/bin/vf.js", "mcp", "--workspace", "/your/project"]
+    }
+  }
+}`
+    },
+    windsurf: {
+      label: 'Windsurf Cascade (.windsurf/mcp_config.json + .windsurfrules)',
+      code: `# 1-Command Auto-Setup for Windsurf Cascade:
+npx vectorforce config install windsurf
+
+# What this creates/updates automatically:
+#  • Workspace: .windsurf/mcp_config.json
+#  • Rules:     .windsurfrules (Cascade continuity instructions)
+{
+  "mcpServers": {
+    "vectorforce": {
+      "command": "node",
+      "args": ["/path/to/bin/vf.js", "mcp", "--workspace", "/your/project"]
+    }
+  }
+}`
+    },
+    copilot: {
+      label: 'GitHub Copilot in VS Code (.vscode/mcp.json + .github/copilot-instructions.md)',
+      code: `# 1-Command Auto-Setup for GitHub Copilot in VS Code:
+npx vectorforce config install copilot
+
+# What this creates/updates automatically:
+#  • Workspace:    .vscode/mcp.json (Uses official 'servers' key)
+#  • Instructions: .github/copilot-instructions.md
+{
+  "servers": {
+    "vectorforce": {
+      "command": "node",
+      "args": ["/path/to/bin/vf.js", "mcp", "--workspace", "/your/project"]
+    }
+  }
+}`
+    },
+    kiro: {
+      label: 'Kiro IDE (.kiro/settings/mcp.json + kiro.json)',
+      code: `# 1-Command Auto-Setup for Kiro IDE:
+npx vectorforce config install kiro
+
+# What this creates/updates automatically:
+#  • Workspace: .kiro/settings/mcp.json
+#  • Steering:  kiro.json
+# Note: Automatically migrates any legacy .kiro/mcp.json entry.
+{
+  "mcpServers": {
+    "vectorforce": {
+      "command": "node",
+      "args": ["/path/to/bin/vf.js", "mcp", "--workspace", "/your/project"]
+    }
+  }
+}`
     }
   };
 
@@ -654,5 +723,33 @@ npx @vectorforce/cloud deploy --target docker --port 443
       }
     });
   }
+
+  /* ------------------------------------------------------------------------
+     Mobile Navigation Drawer Controller
+     ------------------------------------------------------------------------ */
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileCloseBtn = document.getElementById('mobile-close-btn');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const mobileBackdrop = document.getElementById('mobile-backdrop');
+
+  function openMobileDrawer() {
+    if (mobileDrawer) mobileDrawer.classList.add('open');
+    if (mobileBackdrop) mobileBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileDrawer() {
+    if (mobileDrawer) mobileDrawer.classList.remove('open');
+    if (mobileBackdrop) mobileBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileDrawer);
+  if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileDrawer);
+  if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileDrawer);
+
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', closeMobileDrawer);
+  });
 })();
 
