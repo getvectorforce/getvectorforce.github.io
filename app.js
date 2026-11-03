@@ -748,6 +748,10 @@ npx @vectorforce/cloud deploy --target docker --port 443
   if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileDrawer);
   if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileDrawer);
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileDrawer();
+  });
+
   document.querySelectorAll('.mobile-nav-link').forEach((link) => {
     link.addEventListener('click', closeMobileDrawer);
   });
