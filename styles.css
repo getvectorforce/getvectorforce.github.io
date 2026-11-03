@@ -357,6 +357,32 @@ html.light .brand-badge {
   background: var(--bg-card-hover);
 }
 
+.btn-cloud-live {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.16), rgba(99, 102, 241, 0.2));
+  border-color: rgba(245, 158, 11, 0.55);
+  color: #fbbf24;
+}
+
+.btn-cloud-live:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(99, 102, 241, 0.3));
+  border-color: #f59e0b;
+  color: #fde68a;
+  transform: translateY(-1px);
+}
+
+html.light .btn-cloud-live {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.14), rgba(99, 102, 241, 0.1));
+  border-color: rgba(217, 119, 6, 0.6);
+  color: #92400e;
+  font-weight: 700;
+}
+
+html.light .btn-cloud-live:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(99, 102, 241, 0.16));
+  border-color: #d97706;
+  color: #78350f;
+}
+
 .btn-lg {
   padding: 13px 24px;
   font-size: 1rem;
@@ -607,6 +633,13 @@ html.light .brand-badge {
   color: var(--text-primary);
   white-space: nowrap !important;
   flex-shrink: 0;
+}
+
+html.light .harness-chip {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 /* ==========================================================================
@@ -1558,6 +1591,12 @@ html.light .mcp-tool-name {
 .nav-cloud-pill:hover {
   transform: translateY(-1px);
   box-shadow: 0 0 18px rgba(245, 158, 11, 0.35);
+}
+
+html.light .nav-cloud-pill {
+  color: #92400e !important;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.16), rgba(99, 102, 241, 0.1));
+  border-color: rgba(217, 119, 6, 0.5);
 }
 
 .cloud-badge-mini {
