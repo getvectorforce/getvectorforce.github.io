@@ -1872,3 +1872,26 @@ html.light .cloud-select {
 }
 
 
+
+/* Hero Mascot Banner Artwork */
+.hero-mascot-banner {
+  margin: 3rem auto 1.5rem;
+  max-width: 1040px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -10px rgba(99, 102, 241, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  background: #090d16;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hero-mascot-banner:hover {
+  transform: translateY(-3px) scale(1.005);
+  box-shadow: 0 32px 75px -12px rgba(99, 102, 241, 0.45), 0 0 0 1px rgba(168, 85, 247, 0.5);
+}
+
+.hero-mascot-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -165,6 +165,11 @@
             <span class="harness-chip">⚡ Kiro IDE</span>
           </div>
         </div>
+
+        <!-- Mascot & Community Banner -->
+        <div class="hero-mascot-banner">
+          <img src="./assets/vectorforce-banner.jpg" alt="VectorForce — Shared Context. Collective Intelligence." class="banner-img" />
+        </div>
       </div>
     </section>
 
@@ -252,79 +257,39 @@
                 <span class="window-dot dot-yellow"></span>
                 <span class="window-dot dot-green"></span>
               </div>
-              <span>vectorforce-demo-walkthrough.mp4 • 1080p HD</span>
-              <span>03:45</span>
+              <span>vectorforce-demo-walkthrough.mp4 • 1080p HD (Narrated)</span>
+              <span>02:21</span>
             </div>
 
-            <!-- ==============================================================
-                 DEMO VIDEO PLACEHOLDER SLOT
-                 To embed your real video file or YouTube/Loom link:
-                 Option A (Local MP4 in this repo):
-                   Set src="./demo.mp4" on the <source> tag below.
-                 Option B (YouTube / Loom Embed):
-                   Uncomment the <iframe> below and paste your embed URL.
-                 ============================================================== -->
-            <div class="video-stage">
-              <video id="vf-demo-video" controls preload="metadata" style="display: none;">
-                <source src="" type="video/mp4" />
+            <div class="video-stage" style="background: #090d16; border-radius: 8px; overflow: hidden;">
+              <video id="vf-demo-video" controls preload="metadata" poster="./assets/vectorforce-banner.jpg" style="width: 100%; height: auto; display: block; outline: none;">
+                <source src="./assets/demo.mp4" type="video/mp4" />
+                <track src="./assets/demo.srt" kind="subtitles" srclang="en" label="English" default />
                 Your browser does not support HTML5 video.
               </video>
-
-              <!-- Uncomment below to use a YouTube or Loom embed instead:
-              <iframe
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                title="VectorForce Product Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-              -->
-
-              <div class="video-placeholder-overlay">
-                <button id="play-demo-btn" class="play-trigger-btn" title="Play Interactive Demo Walkthrough" aria-label="Play Demo">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="6 3 20 12 6 21 6 3"/>
-                  </svg>
-                </button>
-                <div class="video-placeholder-title" id="video-sim-title">
-                  1. The Problem: Coding Agent Amnesia
-                </div>
-                <p class="video-placeholder-desc">
-                  Click Play or select any chapter below to preview the workflow (or drop in <code>demo.mp4</code> / YouTube URL in <code>index.html</code>).
-                </p>
-
-                <div class="video-sim-screen" id="video-sim-screen">
-<span style="color:#fb7185"># Without VectorForce: Switching from Antigravity to Command Code</span>
-$ claude / command-code
-&gt; "Continue working on the OAuth PKCE task"
-<span style="color:#f59e0b">⚠️ Agent has zero memory of prior session:</span>
-  ✗ Forgot invariant constraint: "Zero external runtime dependencies"
-  ✗ Unaware that src/policy/authorizer.js was modified 10 mins ago
-  ✗ Re-introduces npm package violating ADR-002 security boundary
-                </div>
-              </div>
             </div>
 
             <!-- Interactive Chapter Selector -->
             <div class="video-chapters-bar">
-              <button class="chapter-btn active" type="button">
+              <button class="chapter-btn active" type="button" onclick="const v=document.getElementById('vf-demo-video'); if(v){ v.currentTime=0; v.play(); }">
                 <span class="chapter-time">00:00 • Chapter 1</span>
                 <span class="chapter-name">Agent Amnesia</span>
               </button>
-              <button class="chapter-btn" type="button">
-                <span class="chapter-time">00:45 • Chapter 2</span>
-                <span class="chapter-name">Immutable Checkpoint</span>
+              <button class="chapter-btn" type="button" onclick="const v=document.getElementById('vf-demo-video'); if(v){ v.currentTime=26; v.play(); }">
+                <span class="chapter-time">00:26 • Chapter 2</span>
+                <span class="chapter-name">8-Harness MCP</span>
               </button>
-              <button class="chapter-btn" type="button">
-                <span class="chapter-time">01:30 • Chapter 3</span>
-                <span class="chapter-name">Drift Detection</span>
+              <button class="chapter-btn" type="button" onclick="const v=document.getElementById('vf-demo-video'); if(v){ v.currentTime=55; v.play(); }">
+                <span class="chapter-time">00:55 • Chapter 3</span>
+                <span class="chapter-name">Claims vs Evidence</span>
               </button>
-              <button class="chapter-btn" type="button">
-                <span class="chapter-time">02:15 • Chapter 4</span>
-                <span class="chapter-name">Llama AI Reasoning</span>
+              <button class="chapter-btn" type="button" onclick="const v=document.getElementById('vf-demo-video'); if(v){ v.currentTime=85; v.play(); }">
+                <span class="chapter-time">01:25 • Chapter 4</span>
+                <span class="chapter-name">Studio &amp; Swarm</span>
               </button>
-              <button class="chapter-btn" type="button">
-                <span class="chapter-time">03:10 • Chapter 5</span>
-                <span class="chapter-name">VectorForce Studio</span>
+              <button class="chapter-btn" type="button" onclick="const v=document.getElementById('vf-demo-video'); if(v){ v.currentTime=115; v.play(); }">
+                <span class="chapter-time">01:55 • Chapter 5</span>
+                <span class="chapter-name">AI Reasoning</span>
               </button>
             </div>
           </div>

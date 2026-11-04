@@ -1,0 +1,29 @@
+1
+00:00:01,000 --> 00:00:23,500
+Git tracks your source code. But who tracks what your AI coding agent was thinking?
+Every time you switch between Google Antigravity, Command Code, or Cursor, your AI starts completely blind.
+It forgets your architectural decisions, hallucinates outdated code, and silently violates your constraints.
+We call this Coding Agent Amnesia. And VectorForce solves it.
+
+2
+00:00:26,000 --> 00:00:49,000
+VectorForce is a zero-dependency, local-first engineering memory platform built directly on Node.js and SQLite WAL.
+With one command—vf config install all—VectorForce automatically configures all 8 leading AI harnesses:
+Google Antigravity, Meta Muse, Claude Code, OpenAI Codex, Cursor, Windsurf, Copilot, and Kiro IDE.
+
+3
+00:00:55,000 --> 00:01:13,000
+When an agent records a checkpoint, VectorForce enforces a strict cryptographic fence:
+Unverified model goals and decisions are isolated as Claims,
+while real Git commit hashes, dirty states, and SHA-256 document digests are stored as verifiable Evidence.
+
+4
+00:01:25,000 --> 00:01:45,000
+Launch VectorForce Studio on port 3210 to inspect your system ontology, blast radius, and active architectural decisions.
+In our banking swarm demo, five autonomous peer agents collaborate on complex incident resolution without a supervisor bottleneck, continuously auditing workspace drift.
+
+5
+00:01:55,000 --> 00:02:13,000
+With vf reason, Meta Muse and Llama models synthesize your progress, highlighting architectural risks and ranked next steps.
+VectorForce gives your agents durable memory with zero runtime dependencies.
+Available now on npm: just run npx vectorforce init.
