@@ -543,6 +543,24 @@ vf studio`
      7. VectorForce Cloud Edition (Post-Diwali Nov 15 Launch) Preview & Interest Poll
      ------------------------------------------------------------------------ */
   const cloudPreviewConfigs = {
+    login: {
+      label: 'Browser SSO Login & Headless CI/CD Authentication (vf login)',
+      code: `# 1. Browser-based SSO Login (opens browser portal & redirects to terminal):
+vf login
+
+# 2. Check active cloud session and tier:
+vf whoami
+
+# 3. Scoped temporary token generation for CI/CD runners (GitHub Actions, GitLab CI):
+vf token create --ttl 24
+vf login --token "<TEMPORARY_TOKEN>" --ci
+
+# 4. Push local checkpoints & tasks to Cloud with zero flags:
+vf push
+
+# 5. Pull and decrypt cross-machine context anywhere:
+vf pull`
+    },
     mcp: {
       label: 'Zero-Install Cloud Subscription MCP (.mcp.json / Antigravity / Muse)',
       code: `{
@@ -787,5 +805,33 @@ npx @vectorforce/cloud deploy --target docker --port 443
   document.querySelectorAll('.mobile-nav-link').forEach((link) => {
     link.addEventListener('click', closeMobileDrawer);
   });
+
+  /* ------------------------------------------------------------------------
+     9. Dynamic Package Version Synchronization (NPM Registry / Fallback v0.3.12)
+     ------------------------------------------------------------------------ */
+  async function syncDynamicVersion() {
+    const defaultVersion = 'v0.3.12';
+    // Immediately set all version targets
+    document.querySelectorAll('.brand-badge, [data-dynamic-version]').forEach((el) => {
+      el.textContent = defaultVersion;
+    });
+
+    try {
+      const res = await fetch('https://registry.npmjs.org/vectorforce/latest', { cache: 'no-cache' });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.version) {
+          const liveVersion = 'v' + data.version;
+          document.querySelectorAll('.brand-badge, [data-dynamic-version]').forEach((el) => {
+            el.textContent = liveVersion;
+          });
+        }
+      }
+    } catch (_) {
+      // Offline or network error: defaultVersion remains displayed
+    }
+  }
+
+  syncDynamicVersion();
 })();
 

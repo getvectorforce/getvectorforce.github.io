@@ -26,7 +26,7 @@
       <a href="#" class="brand">
         <img src="./favicon.svg" alt="VectorForce Logo" class="brand-logo" />
         <span>VectorForce</span>
-        <span class="brand-badge">v0.3.3</span>
+        <span class="brand-badge" id="vf-version-badge" data-dynamic-version>v0.3.12</span>
       </a>
 
       <ul class="nav-links">
@@ -40,6 +40,7 @@
             <span class="cloud-badge-mini">Live</span>
           </a>
         </li>
+        <li><a href="#dev-support">Dev Guide</a></li>
         <li><a href="#mcp-tools">MCP Tools</a></li>
       </ul>
 
@@ -57,6 +58,10 @@
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </svg>
         </button>
+        <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary nav-cloud-login-btn" style="border-color: rgba(99, 102, 241, 0.45); background: rgba(99, 102, 241, 0.12); color: #c7d2fe; display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; font-weight: 600; font-size: 0.88rem;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px #34d399;"></span>
+          <span>Cloud Login</span>
+        </a>
         <a href="https://youtu.be/Ufb_IjCU2l4" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Watch Demo Video on YouTube" aria-label="YouTube">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#ef4444"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         </a>
@@ -90,8 +95,26 @@
       <a href="#" class="brand">
         <img src="./favicon.svg" alt="VectorForce Logo" class="brand-logo" />
         <span>VectorForce</span>
-        <span class="brand-badge">v0.3.3</span>
+        <span class="brand-badge" data-dynamic-version>v0.3.12</span>
       </a>
+      <button class="icon-btn" id="mobile-close-btn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#why-vectorforce" class="mobile-nav-link">Why VectorForce</a></li>
+      <li><a href="#demo-video" class="mobile-nav-link">Demo Video</a></li>
+      <li><a href="#studio-preview" class="mobile-nav-link">Studio UI</a></li>
+      <li><a href="#installation" class="mobile-nav-link">Free OSS Setup</a></li>
+      <li><a href="#cloud-edition" class="mobile-nav-link" style="color: #fbbf24;">☁️ Cloud Edition (Live)</a></li>
+      <li><a href="#dev-support" class="mobile-nav-link">Developer Guide</a></li>
+      <li><a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/login" target="_blank" rel="noopener noreferrer" class="mobile-nav-link" style="color: #34d399; font-weight: 700;">🔑 Login with VF-Cloud ↗</a></li>
+      <li><a href="#mcp-tools" class="mobile-nav-link">MCP Tools</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
       <button class="icon-btn" id="mobile-close-btn" aria-label="Close navigation menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="18" y1="6" x2="6" y2="18"/>
@@ -142,12 +165,16 @@
             <span>Free OSS Installation</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
+          <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="border-color: rgba(99, 102, 241, 0.5); background: rgba(99, 102, 241, 0.15); color: #c7d2fe;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 10px #34d399;"></span>
+            <span>Login with VF-Cloud ↗</span>
+          </a>
           <a href="https://youtu.be/Ufb_IjCU2l4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="border-color: rgba(239, 68, 68, 0.45); background: rgba(239, 68, 68, 0.08);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#ef4444"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            <span>Watch Demo (2m 21s) ↗</span>
+            <span>Watch Demo ↗</span>
           </a>
           <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/?project=proj-meta-e2ee" target="_blank" rel="noopener noreferrer" class="btn btn-cloud-live btn-lg">
-            <span>☁️ Live Cloud Demo ↗</span>
+            <span>☁️ Live Cloud Hub ↗</span>
           </a>
         </div>
 
@@ -825,27 +852,33 @@ vf studio</pre>
 
             <!-- Interactive Preview Tabs for Cloud MCP, PM Interpreter & 1-Command Deploy -->
             <div class="harness-tabs" id="cloud-preview-tabs" style="margin-top: 18px;">
-              <button class="harness-tab-btn active" type="button" data-cloud-tab="mcp">🔑 Subscription MCP Config</button>
-              <button class="harness-tab-btn" type="button" data-cloud-tab="sync">🔄 2-Machine Sync &amp; Tasks</button>
-              <button class="harness-tab-btn" type="button" data-cloud-tab="deploy">🚀 1-Command Service Deploy</button>
+              <button class="harness-tab-btn active" type="button" data-cloud-tab="login">⚡ Browser SSO Login (vf login)</button>
+              <button class="harness-tab-btn" type="button" data-cloud-tab="mcp">🔑 Subscription MCP</button>
+              <button class="harness-tab-btn" type="button" data-cloud-tab="sync">🔄 2-Machine Sync</button>
+              <button class="harness-tab-btn" type="button" data-cloud-tab="deploy">🚀 1-Command Deploy</button>
             </div>
 
             <div class="code-window">
               <div class="code-window-header">
-                <span id="cloud-code-title">Zero-Install Cloud Subscription MCP (.mcp.json / Antigravity / Muse)</span>
-                <button class="copy-chip" id="cloud-copy-btn" data-copy="{ &quot;mcpServers&quot;: { &quot;vectorforce-cloud&quot;: { &quot;serverUrl&quot;: &quot;https://mcp.vectorforce.ai/v1/sse&quot;, &quot;headers&quot;: { &quot;Authorization&quot;: &quot;Bearer vf_live_sub_98a7bc65...&quot; } } } }">Copy</button>
+                <span id="cloud-code-title">Browser SSO Login &amp; Headless CI/CD Authentication (vf login)</span>
+                <button class="copy-chip" id="cloud-copy-btn" data-copy="vf login">Copy</button>
               </div>
-              <pre class="code-pre" id="cloud-code-pre">{
-  "mcpServers": {
-    "vectorforce-cloud": {
-      "serverUrl": "https://mcp.vectorforce.ai/v1/sse",
-      "headers": {
-        "Authorization": "Bearer vf_live_sub_98a7bc65...",
-        "X-VF-Project-Id": "proj_bistroforce_prod",
-        "X-VF-Developer": "rahul@company.com"
-      }
-    }
-  }
+              <pre class="code-pre" id="cloud-code-pre"># 1. Browser-based SSO Login (opens browser portal &amp; redirects to terminal):
+vf login
+
+# 2. Check active cloud session and tier:
+vf whoami
+
+# 3. Scoped temporary token generation for CI/CD runners (GitHub Actions, GitLab CI):
+vf token create --ttl 24
+vf login --token "&lt;TEMPORARY_TOKEN&gt;" --ci
+
+# 4. Push local checkpoints &amp; tasks to Cloud with zero flags:
+vf push
+
+# 5. Pull and decrypt cross-machine context anywhere:
+vf pull</pre>
+            </div>
 }</pre>
             </div>
           </div>
@@ -967,6 +1000,80 @@ vf studio</pre>
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer Support & Integration Guide Section -->
+    <section id="dev-support" style="padding: 90px 0; border-top: 1px solid var(--border);">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 48px;">
+          <span class="eyebrow" style="color: #38bdf8;">Production Engineering</span>
+          <h2 class="section-title">Developer Support &amp; Integration Guide</h2>
+          <p class="section-subtitle">
+            Comprehensive operational reference for integrating VectorForce across agentic harnesses, CI/CD runners, and enterprise repositories.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 40px;">
+          <!-- Card 1: Cloud Auth & SSO -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;">
+            <div style="font-size: 1.8rem; margin-bottom: 12px;">🔑</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Browser SSO &amp; CI/CD Auth</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
+              Authenticate your terminal in 1 click using <code>vf login</code> with automated browser loopback callback. In headless pipelines (GitHub Actions, Docker), mint scoped temporary tokens via <code>vf token create --ttl 24</code>.
+            </p>
+            <div style="background: var(--bg-surface); padding: 10px 14px; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: #a5b4fc; border: 1px solid var(--border);">
+              $ vf login # Browser SSO<br/>
+              $ vf token create --ttl 24
+            </div>
+          </div>
+
+          <!-- Card 2: Workspace Diagnostics -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;">
+            <div style="font-size: 1.8rem; margin-bottom: 12px;">🩺</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Workspace Diagnostics &amp; Drift</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
+              Run <code>vf doctor</code> to verify harness configurations, Git HEAD hashes, and SQLite engine readiness. Detect silent file modifications with <code>vf drift</code> before model poisoning occurs.
+            </p>
+            <div style="background: var(--bg-surface); padding: 10px 14px; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: #34d399; border: 1px solid var(--border);">
+              $ vf doctor<br/>
+              $ vf drift --task &lt;id&gt;
+            </div>
+          </div>
+
+          <!-- Card 3: Multi-Agent Continuity -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;">
+            <div style="font-size: 1.8rem; margin-bottom: 12px;">🔄</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Deterministic Briefings &amp; Handoff</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
+              Switch between Antigravity, Muse, Codex, and Claude Code using destination briefings (<code>vf resume --dest &lt;harness&gt;</code>) or export HMAC-SHA256 encrypted handoff packages (<code>vf export</code>).
+            </p>
+            <div style="background: var(--bg-surface); padding: 10px 14px; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: #fbbf24; border: 1px solid var(--border);">
+              $ vf resume --dest muse<br/>
+              $ vf export --task &lt;id&gt;
+            </div>
+          </div>
+        </div>
+
+        <!-- Callout Banner Linking to DEVELOPER_SUPPORT.md -->
+        <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 16px; padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+          <div>
+            <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 6px; color: #fff;">
+              📖 Read the Full VectorForce Developer Guide
+            </h4>
+            <p style="color: var(--text-secondary); font-size: 0.94rem; max-width: 650px;">
+              Includes complete CLI recipe walkthroughs, zero-dependency Node.js internals, custom BYOK AI configurations, cryptographic envelope specifications, and FAQ.
+            </p>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://github.com/getvectorforce/VectorForce/blob/main/DEVELOPER_SUPPORT.md" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-weight: 700;">
+              <span>View DEVELOPER_SUPPORT.md ↗</span>
+            </a>
+            <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <span>Cloud Login Portal ↗</span>
+            </a>
           </div>
         </div>
       </div>
