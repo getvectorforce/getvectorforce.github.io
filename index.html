@@ -519,7 +519,7 @@
             <div>
               <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #34d399; font-weight: 700;">✓ AVAILABLE NOW • MIT / APACHE-2.0</div>
               <div style="font-size: 1.04rem; font-weight: 800; color: var(--text-primary); margin-top: 2px;">Free Open-Source CLI + Local Studio</div>
-              <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px;">Single machine • Local SQLite WAL • 9 MCP tools</div>
+              <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px;">Single machine • Local SQLite WAL • 11 MCP tools</div>
             </div>
             <span class="brand-badge" style="background: rgba(16,185,129,0.2); color: #34d399;">Free</span>
           </a>
@@ -1075,13 +1075,25 @@ vf pull</pre>
       <div class="container">
         <div class="section-header">
           <span class="eyebrow">Model Context Protocol</span>
-          <h2 class="section-title">9 Native MCP Tools for Autonomous Agents</h2>
+          <h2 class="section-title">11 Native MCP Tools for Autonomous Agents</h2>
           <p class="section-subtitle">
-            Once connected via MCP, your AI coding agent automatically calls these tools to stay aligned with your project's architectural invariants.
+            Once connected via MCP, your AI coding agent automatically calls these tools to stay aligned with your project's architectural invariants without reading or tampering with package internals.
           </p>
         </div>
 
         <div class="mcp-grid">
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>create_task</span> <span>TASK</span></div>
+            <p>Creates a new engineering task or subtask in SQLite WAL with parent lineage (<code>parent_task_id</code>) and initial metadata.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>update_task</span> <span>TASK</span></div>
+            <p>Updates an active task or subtask status (<code>active</code>, <code>completed</code>, <code>abandoned</code>) directly from the AI chat.</p>
+          </div>
+          <div class="mcp-card">
+            <div class="mcp-tool-name"><span>list_tasks</span> <span>QUERY</span></div>
+            <p>Discovers and filters active, paused, or completed tasks and subtasks tracked inside the workspace SQLite WAL database.</p>
+          </div>
           <div class="mcp-card">
             <div class="mcp-tool-name"><span>save_checkpoint</span> <span>WRITE</span></div>
             <p>Commits an immutable checkpoint combining model claims with verifiable Git commit SHAs and allowlisted document hashes.</p>
@@ -1097,10 +1109,6 @@ vf pull</pre>
           <div class="mcp-card">
             <div class="mcp-tool-name"><span>reason_about_task</span> <span>AI MEMORY</span></div>
             <p>Generates a Llama / Meta Muse narrative summarizing where work left off, architectural risks, and ranked next actions.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>list_tasks</span> <span>QUERY</span></div>
-            <p>Discovers and filters active, paused, or completed tasks tracked inside the workspace SQLite WAL database.</p>
           </div>
           <div class="mcp-card">
             <div class="mcp-tool-name"><span>set_document_policy</span> <span>POLICY</span></div>
