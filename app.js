@@ -721,7 +721,7 @@ npx @vectorforce/cloud deploy --target docker --port 443
       // 1. Send directly to VectorForce Cloud permanent SQLite database
       let dbLeadId = 'VF-NOV15-EARLY';
       try {
-        const cloudDbRes = await fetch('https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/api/customer-interest', {
+        const cloudDbRes = await fetch('https://api.vectorforce.in/api/customer-interest', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

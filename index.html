@@ -26,22 +26,21 @@
       <a href="#" class="brand">
         <img src="./favicon.svg" alt="VectorForce Logo" class="brand-logo" />
         <span>VectorForce</span>
-        <span class="brand-badge" id="vf-version-badge" data-dynamic-version>v0.3.12</span>
+        <span class="brand-badge" id="vf-version-badge" data-dynamic-version>v0.3.13</span>
       </a>
 
       <ul class="nav-links">
         <li><a href="#why-vectorforce">Why VectorForce</a></li>
         <li><a href="#demo-video">Demo</a></li>
         <li><a href="#studio-preview">Studio UI</a></li>
-        <li><a href="#installation">OSS Setup</a></li>
+        <li><a href="#installation">Quickstart</a></li>
         <li>
           <a href="#cloud-edition" class="nav-cloud-pill">
             <span>☁️ Cloud</span>
             <span class="cloud-badge-mini">Live</span>
           </a>
         </li>
-        <li><a href="#dev-support">Dev Guide</a></li>
-        <li><a href="#mcp-tools">MCP Tools</a></li>
+        <li><a href="https://docs.vectorforce.in" target="_blank" rel="noopener noreferrer">Docs ↗</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -91,7 +90,7 @@
       <a href="#" class="brand">
         <img src="./favicon.svg" alt="VectorForce Logo" class="brand-logo" />
         <span>VectorForce</span>
-        <span class="brand-badge" data-dynamic-version>v0.3.12</span>
+        <span class="brand-badge" data-dynamic-version>v0.3.13</span>
       </a>
       <button class="icon-btn" id="mobile-close-btn" aria-label="Close navigation menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -104,26 +103,9 @@
       <li><a href="#why-vectorforce" class="mobile-nav-link">Why VectorForce</a></li>
       <li><a href="#demo-video" class="mobile-nav-link">Demo Video</a></li>
       <li><a href="#studio-preview" class="mobile-nav-link">Studio UI</a></li>
-      <li><a href="#installation" class="mobile-nav-link">Free OSS Setup</a></li>
+      <li><a href="#installation" class="mobile-nav-link">Quickstart</a></li>
       <li><a href="#cloud-edition" class="mobile-nav-link" style="color: #fbbf24;">☁️ Cloud Edition (Live)</a></li>
-      <li><a href="#dev-support" class="mobile-nav-link">Developer Guide</a></li>
-      <li><a href="#mcp-tools" class="mobile-nav-link">MCP Tools</a></li>
-    </ul>
-    <div class="mobile-drawer-footer">
-      <button class="icon-btn" id="mobile-close-btn" aria-label="Close navigation menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
-    </div>
-    <ul class="mobile-nav-links">
-      <li><a href="#why-vectorforce" class="mobile-nav-link">Why VectorForce</a></li>
-      <li><a href="#demo-video" class="mobile-nav-link">Demo Video</a></li>
-      <li><a href="#studio-preview" class="mobile-nav-link">Studio UI</a></li>
-      <li><a href="#installation" class="mobile-nav-link">Free OSS Setup</a></li>
-      <li><a href="#cloud-edition" class="mobile-nav-link" style="color: #fbbf24;">☁️ Cloud Edition (Live)</a></li>
-      <li><a href="#mcp-tools" class="mobile-nav-link">MCP Tools</a></li>
+      <li><a href="https://docs.vectorforce.in" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Docs ↗</a></li>
     </ul>
     <div class="mobile-drawer-footer">
       <a href="https://github.com/getvectorforce/VectorForce" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%; justify-content: center;">
@@ -164,7 +146,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#ef4444"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             <span>Watch Demo (2m 21s) ↗</span>
           </a>
-          <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/?project=proj-meta-e2ee" target="_blank" rel="noopener noreferrer" class="btn btn-cloud-live btn-lg">
+          <a href="https://cloud.vectorforce.in/?project=proj-meta-e2ee" target="_blank" rel="noopener noreferrer" class="btn btn-cloud-live btn-lg">
             <span>☁️ Live Cloud Hub ↗</span>
           </a>
         </div>
@@ -502,264 +484,79 @@
       </div>
     </section>
 
-    <!-- Complete Installation & Quickstart Guide -->
+    <!-- Quickstart & Documentation Hub -->
     <section id="installation">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">Step-by-Step Setup</span>
-          <h2 class="section-title">Installation &amp; Quickstart Guide (Free Open-Source Edition)</h2>
+          <span class="eyebrow">60-Second Quickstart</span>
+          <h2 class="section-title">Start Locally. Sync Globally.</h2>
           <p class="section-subtitle">
-            Get the local-first Open-Source Edition running in under 60 seconds (requires <strong>Node.js 22.5.0+</strong>). Need Multi-Project Cloud Sync, Developer Task Assignment, or the PM &amp; Customer Web Portal? <a href="#cloud-edition" style="color: #fbbf24; font-weight: 700; text-decoration: underline;">Explore VectorForce Cloud (Launching Post-Diwali • After Nov 15) →</a>
+            Run the Open-Source CLI locally with <strong>Node.js 22.5.0+</strong>, or connect to <strong>VectorForce Cloud</strong> for encrypted cross-machine sync. Full IDE, CLI, MCP, and API references now live at <a href="https://docs.vectorforce.in" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-weight: 700; text-decoration: underline;">docs.vectorforce.in →</a>
           </p>
         </div>
 
-        <!-- Edition Switcher Banner: Free Open Source vs Cloud Subscription -->
         <div class="edition-switcher-banner" role="region" aria-label="Choose VectorForce Edition">
-          <a href="#step-1" class="edition-switch-card oss-active">
+          <a href="https://docs.vectorforce.in/#quickstart" target="_blank" rel="noopener noreferrer" class="edition-switch-card oss-active">
             <div>
-              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #34d399; font-weight: 700;">✓ AVAILABLE NOW • MIT / APACHE-2.0</div>
+              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #34d399; font-weight: 700;">✓ OPEN SOURCE • MIT / APACHE-2.0</div>
               <div style="font-size: 1.04rem; font-weight: 800; color: var(--text-primary); margin-top: 2px;">Free Open-Source CLI + Local Studio</div>
               <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px;">Single machine • Local SQLite WAL • 11 MCP tools</div>
             </div>
             <span class="brand-badge" style="background: rgba(16,185,129,0.2); color: #34d399;">Free</span>
           </a>
 
-          <a href="#cloud-edition" class="edition-switch-card cloud-promo">
+          <a href="https://cloud.vectorforce.in" target="_blank" rel="noopener noreferrer" class="edition-switch-card cloud-promo">
             <div>
-              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">🪔 LAUNCHING POST-DIWALI • AFTER 15 NOV</div>
-              <div style="font-size: 1.04rem; font-weight: 800; color: var(--text-primary); margin-top: 2px;">☁️ VectorForce Cloud &amp; Team Subscription</div>
-              <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px;">Multi-Project Hub • 2-Machine Sync • PM Portal • 1-Click Deploy</div>
+              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #34d399; font-weight: 700;">🚀 LIVE NOW • CLOUDFLARE EDGE + D1</div>
+              <div style="font-size: 1.04rem; font-weight: 800; color: var(--text-primary); margin-top: 2px;">☁️ VectorForce Cloud &amp; Team Hub</div>
+              <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px;">E2EE Multi-Machine Sync • Fine-Grained RBAC • Audit Ledger</div>
             </div>
-            <span class="cloud-badge-mini">Are You Interested? →</span>
+            <span class="cloud-badge-mini">Open Hub →</span>
           </a>
         </div>
 
-        <div class="install-layout">
-          <!-- Sticky Left Navigation -->
-          <aside class="install-steps-nav">
-            <h4>Setup Checklist</h4>
-            <ul class="step-nav-list">
-              <li class="step-nav-item"><a href="#step-1"><span class="step-num">1</span> Install VectorForce</a></li>
-              <li class="step-nav-item"><a href="#step-2"><span class="step-num">2</span> Initialize &amp; Create Task</a></li>
-              <li class="step-nav-item"><a href="#step-3"><span class="step-num">3</span> Connect AI Harnesses</a></li>
-              <li class="step-nav-item"><a href="#step-4"><span class="step-num">4</span> Commit Checkpoints</a></li>
-              <li class="step-nav-item"><a href="#step-5"><span class="step-num">5</span> AI Memory &amp; Studio UI</a></li>
-            </ul>
-          </aside>
-
-          <!-- Right Step Cards -->
-          <div class="install-content">
-            <!-- Step 1 -->
-            <div class="install-step-card" id="step-1">
-              <div class="install-step-header">
-                <span class="install-step-badge">STEP 1</span>
-                <h3>Install VectorForce (npm or GitHub)</h3>
-              </div>
-              <p>
-                Install globally via npm to use the <code>vf</code> and <code>vectorforce</code> CLI commands anywhere, or clone directly from GitHub:
-              </p>
-              <div class="code-window">
-                <div class="code-window-header">
-                  <span>Terminal — Global npm Install or Source Clone</span>
-                  <button class="copy-chip" data-copy="npm install -g vectorforce">Copy npm</button>
-                </div>
-                <pre class="code-pre"><span class="code-comment"># Option A: Install globally from npm (Recommended)</span>
-<span class="code-cmd">npm install -g vectorforce</span>
-
-<span class="code-comment"># Option B: Run directly via npx without installing</span>
-<span class="code-cmd">npx vectorforce --help</span>
-
-<span class="code-comment"># Option C: Clone from GitHub (Zero dependencies to install!)</span>
-<span class="code-cmd">git clone https://github.com/getvectorforce/VectorForce.git</span>
-<span class="code-cmd">cd VectorForce &amp;&amp; npm test</span></pre>
-              </div>
+        <div class="features-grid" style="margin-top: 28px;">
+          <div class="feature-card">
+            <div class="feature-icon">1️⃣</div>
+            <h3>Install &amp; Initialize</h3>
+            <p>Install the zero-dependency CLI and auto-configure MCP across your AI IDEs in one command.</p>
+            <div class="code-window" style="margin-top: 12px;">
+              <pre style="margin:0;padding:12px;font-size:0.82rem;"><code>npm install -g vectorforce
+vf init --harness all</code></pre>
             </div>
+          </div>
 
-            <!-- Step 2 -->
-            <div class="install-step-card" id="step-2">
-              <div class="install-step-header">
-                <span class="install-step-badge">STEP 2</span>
-                <h3>Initialize Your Project &amp; Create an Active Task</h3>
-              </div>
-              <p>
-                Navigate to your repository and initialize VectorForce. This creates a local, git-ignored <code>.vectorforce/vectorforce.db</code> SQLite WAL store inside your workspace.
-              </p>
-              <div class="code-window">
-                <div class="code-window-header">
-                  <span>Terminal — Project &amp; Task Initialization</span>
-                  <button class="copy-chip" data-copy="vf init && vf task auth-module &quot;Implement PKCE OAuth Authentication&quot;">Copy</button>
-                </div>
-                <pre class="code-pre"><span class="code-comment"># 1. Initialize VectorForce in your repository root</span>
-<span class="code-cmd">vf init</span>
-
-<span class="code-comment"># 2. Create and activate an engineering task</span>
-<span class="code-cmd">vf task</span> <span class="code-flag">auth-module</span> <span class="code-str">"Implement PKCE OAuth Authentication"</span>
-
-<span class="code-comment"># 3. Allowlist architecture documents for cryptographic hash tracking</span>
-<span class="code-cmd">vf policy allow</span> <span class="code-str">AGENTS.md</span>
-<span class="code-cmd">vf policy allow</span> <span class="code-str">README.md</span></pre>
-              </div>
+          <div class="feature-card">
+            <div class="feature-icon">2️⃣</div>
+            <h3>Authenticate &amp; Sync</h3>
+            <p>Connect your terminal to <code>cloud.vectorforce.in</code> via browser SSO or scoped CI/CD tokens.</p>
+            <div class="code-window" style="margin-top: 12px;">
+              <pre style="margin:0;padding:12px;font-size:0.82rem;"><code>vf login --url https://cloud.vectorforce.in
+vf push &amp;&amp; vf pull</code></pre>
             </div>
+          </div>
 
-            <!-- Step 3 -->
-            <div class="install-step-card" id="step-3">
-              <div class="install-step-header">
-                <span class="install-step-badge">STEP 3</span>
-                <h3>Connect Your AI Coding Agent (Zero Manual JSON Editing)</h3>
-              </div>
-              <p>
-                <strong>How MCP actually works:</strong> You <em>never</em> have to run <code>vf mcp</code> manually in a terminal! Instead, each AI coding tool reads its own configuration file and automatically spawns VectorForce in the background over <code>stdio</code>.
-              </p>
-
-              <!-- Clear File Mapping Explanation for all 8 supported AI coding agents -->
-              <div class="flow-steps" style="margin-bottom: 20px;">
-                <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(99,102,241,0.2);color:#818cf8;">⚡</span>
-                  <div><strong>Google Antigravity:</strong> Reads <code>.agents/mcp_config.json</code> (workspace) and <code>~/.gemini/antigravity/mcp_config.json</code> (global IDE).</div>
-                </div>
-                <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(192,132,252,0.2);color:#c084fc;">🦙</span>
-                  <div><strong>Meta Muse:</strong> Reads <code>~/.config/muse/settings.json</code> and workspace <code>.muse/mcp_config.json</code>.</div>
-                </div>
-                <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(16,185,129,0.2);color:#34d399;">⌘</span>
-                  <div><strong>Claude Code &amp; Command Code:</strong> Auto-detects <code>.mcp.json</code> and <code>commandcode.json</code> in project root.</div>
-                </div>
-                <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(56,189,248,0.2);color:#38bdf8;">◈</span>
-                  <div><strong>OpenAI Codex CLI:</strong> Reads <code>.codex/config.toml</code> and <code>~/.codex/config.toml</code>.</div>
-                </div>
-                <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(244,63,94,0.2);color:#fb7185;">🖱️</span>
-                  <div><strong>Cursor IDE:</strong> Reads <code>.cursor/mcp.json</code> and steers via <code>.cursorrules</code>.</div>
-                </div>
-                <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(6,182,212,0.2);color:#22d3ee;">🌊</span>
-                  <div><strong>Windsurf Cascade:</strong> Reads <code>.windsurf/mcp_config.json</code> and <code>.windsurfrules</code>.</div>
-                </div>
-                <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(168,85,247,0.2);color:#c084fc;">🐙</span>
-                  <div><strong>GitHub Copilot:</strong> Reads <code>.vscode/mcp.json</code> (official <code>servers</code> key) and <code>.github/copilot-instructions.md</code>.</div>
-                </div>
-                <div class="flow-step">
-                  <span class="flow-icon" style="background:rgba(245,158,11,0.2);color:#fbbf24;">⚡</span>
-                  <div><strong>Kiro IDE:</strong> Reads <code>.kiro/settings/mcp.json</code> and <code>kiro.json</code>.</div>
-                </div>
-              </div>
-
-              <div class="harness-tabs" id="harness-config-tabs">
-                <button class="harness-tab-btn active" type="button" data-harness-tab="all">⚡ All Harnesses (1-Click)</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="antigravity">Google Antigravity</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="muse">Meta Muse</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="command-code">Claude / Command Code</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="codex">OpenAI Codex</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="cursor">Cursor IDE</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="windsurf">Windsurf Cascade</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="copilot">GitHub Copilot</button>
-                <button class="harness-tab-btn" type="button" data-harness-tab="kiro">Kiro IDE</button>
-              </div>
-
-              <div class="code-window">
-                <div class="code-window-header">
-                  <span id="harness-code-title">Auto-Configure All Harnesses + Verify with vf status</span>
-                  <button class="copy-chip" id="harness-copy-btn" data-copy="npx vectorforce config install all && npx vectorforce status">Copy</button>
-                </div>
-                <pre class="code-pre" id="harness-code-pre"># 1. Auto-configure Antigravity, Claude Code, Command Code, Meta Muse, Codex, Cursor, Windsurf, Copilot &amp; Kiro:
-npx vectorforce config install all
-
-# 2. Check which MCP config files were created and verify readiness:
-npx vectorforce status
-
-# Note: You do NOT need to run "vf mcp" manually!
-# Each AI tool reads its config file and spawns the MCP server automatically.</pre>
-              </div>
-
-              <div style="margin-top: 16px; padding: 14px 18px; border-radius: 10px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.9rem;">
-                <strong style="color: #34d399;">✅ How do I know it's working inside my AI agent?</strong><br />
-                Open your AI coding agent (Antigravity, Claude Code, Command Code, Muse, or Codex) and type in the chat:<br />
-                <code style="color: #f8fafc; background: rgba(0,0,0,0.35); padding: 3px 8px; border-radius: 5px; display: inline-block; margin-top: 6px;">"List active VectorForce tasks and check workspace drift"</code><br />
-                You will immediately see the agent call the <code>list_tasks</code> and <code>check_workspace_drift</code> MCP tools!
-              </div>
+          <div class="feature-card">
+            <div class="feature-icon">3️⃣</div>
+            <h3>Inspect &amp; Reason</h3>
+            <p>Launch the local Studio graph or let any MCP-connected agent resume work with verified Git evidence.</p>
+            <div class="code-window" style="margin-top: 12px;">
+              <pre style="margin:0;padding:12px;font-size:0.82rem;"><code>vf studio
+vf reason --task auth-module</code></pre>
             </div>
+          </div>
+        </div>
 
-            <!-- Step 4 -->
-            <div class="install-step-card" id="step-4">
-              <div class="install-step-header">
-                <span class="install-step-badge">STEP 4</span>
-                <h3>Capture Checkpoints &amp; Detect Workspace Drift</h3>
-              </div>
-              <p>
-                At the end of a work session—or before switching from one AI agent to another—record an immutable checkpoint. When resuming, check for drift and retrieve the authorized briefing:
-              </p>
-              <div class="code-window">
-                <div class="code-window-header">
-                  <span>Terminal — Checkpoint, Drift &amp; Cross-Harness Resume</span>
-                  <button class="copy-chip" data-copy="vf drift --task auth-module && vf resume --task auth-module --dest antigravity">Copy</button>
-                </div>
-                <pre class="code-pre"><span class="code-comment"># Commit an immutable checkpoint with Claims + Verifiable Evidence</span>
-<span class="code-cmd">vf checkpoint</span> <span class="code-flag">--task</span> auth-module \
-  <span class="code-flag">--summary</span> <span class="code-str">"Completed PKCE OAuth handshake and token validation"</span> \
-  <span class="code-flag">--goal</span> <span class="code-str">"Ship secure OAuth flow"</span> \
-  <span class="code-flag">--constraint</span> <span class="code-str">"Zero external auth libraries"</span> \
-  <span class="code-flag">--decision</span> <span class="code-str">"DEC-AUTH-01:PKCE:Use SHA-256 code challenge with local storage"</span> \
-  <span class="code-flag">--next</span> <span class="code-str">"Implement refresh token rotation"</span> \
-  <span class="code-flag">--doc</span> <span class="code-str">"AGENTS.md"</span>
-
-<span class="code-comment"># Check if Git commits or allowlisted files drifted since the checkpoint</span>
-<span class="code-cmd">vf drift</span> <span class="code-flag">--task</span> auth-module
-
-<span class="code-comment"># Generate an authorized briefing for your destination harness</span>
-<span class="code-cmd">vf resume</span> <span class="code-flag">--task</span> auth-module <span class="code-flag">--dest</span> antigravity</pre>
-              </div>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="install-step-card" id="step-5">
-              <div class="install-step-header">
-                <span class="install-step-badge">STEP 5</span>
-                <h3>Configure AI Memory Models (Meta Muse &amp; Muse Spark Open 1st Priority + Fireworks, Ollama, OpenRouter, OpenAI, Anthropic, BYOK)</h3>
-              </div>
-              <p>
-                Built for the <strong>Meta Muse Hackathon</strong>: VectorForce makes <strong>Meta Muse (<code>muse-spark-1.3</code>)</strong> and the open-weights <strong>Meta Muse Spark Open (<code>muse-spark-open</code> • 1M token context window)</strong> its <strong>#1 priority reasoning models</strong>—accessible directly via Meta API, <strong>Fireworks AI</strong>, <strong>OpenRouter</strong>, or <strong>Local Ollama</strong>:
-              </p>
-
-              <!-- Model Provider Interactive Tabs -->
-              <div class="harness-tabs" id="llm-provider-tabs">
-                <button class="harness-tab-btn active" type="button" data-llm-tab="muse">🦙 Meta Muse (1st Priority)</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="fireworks">🔥 Fireworks AI (muse-spark-open)</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="openrouter">🌐 OpenRouter (meta/muse-spark-open)</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="ollama">🏠 Local Ollama (Offline)</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="openai">◈ OpenAI / Codex</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="anthropic">✦ Anthropic Claude</button>
-                <button class="harness-tab-btn" type="button" data-llm-tab="byok">🔑 Any Custom BYOK</button>
-              </div>
-
-              <div class="code-window">
-                <div class="code-window-header">
-                  <span id="llm-code-title">Meta Muse Direct API + Open-Source Muse Spark Open (1st Priority Default)</span>
-                  <button class="copy-chip" id="llm-copy-btn" data-copy="vf config muse <YOUR_API_KEY> && vf reason --task auth-module && vf studio">Copy</button>
-                </div>
-                <pre class="code-pre" id="llm-code-pre"># Option A: Configure Meta Muse Direct API (api.meta.ai/v1 • muse-spark-1.3)
-vf config muse &lt;YOUR_API_KEY&gt;
-vf reason --task auth-module
-
-# Option B: Use Open-Weights "Muse Spark Open" (1M Context) via Fireworks AI:
-vf config fireworks &lt;YOUR_FIREWORKS_API_KEY&gt; accounts/fireworks/models/muse-spark-open
-vf reason --task auth-module
-
-# Option C: Use "Muse Spark Open" via OpenRouter:
-vf config openrouter &lt;YOUR_OPENROUTER_API_KEY&gt; meta/muse-spark-open
-
-# Launch VectorForce Studio Web Control Center on http://127.0.0.1:3210
-vf studio</pre>
-              </div>
-
-              <div style="margin-top: 16px; padding: 14px 18px; border-radius: 10px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.88rem; color: var(--text-secondary);">
-                <strong style="color: #818cf8;">🖥️ Configure Visually in VectorForce Studio:</strong>
-                Run <code>vf studio</code> (opens <code>http://127.0.0.1:3210</code>) and click the <strong>Settings</strong> tab in the sidebar to switch between <strong>Meta Muse</strong>, <strong>Fireworks AI (<code>muse-spark-open</code>)</strong>, <strong>OpenRouter</strong>, <strong>Ollama</strong>, <strong>OpenAI</strong>, or <strong>Anthropic</strong>.
-                Need deterministic output with zero LLM calls? Run <code>vf reason --task auth-module --raw</code>.
-              </div>
-            </div>
+        <div style="margin-top: 32px; background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.12) 100%); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 16px; padding: 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; color: #fff;">📚 Complete Documentation Shifted to docs.vectorforce.in</h3>
+            <p style="color: var(--text-secondary); font-size: 0.94rem; max-width: 660px; margin: 0;">
+              Explore full IDE &amp; MCP setup guides (Antigravity, Claude Code, Cursor, Windsurf, Codex, Copilot, Muse, Kiro), all 11 MCP tools, CLI commands, and REST API references.
+            </p>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://docs.vectorforce.in" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Docs ↗</a>
+            <a href="https://docs.vectorforce.in/#mcp-tools" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">11 MCP Tools ↗</a>
           </div>
         </div>
       </div>
@@ -783,10 +580,10 @@ vf studio</pre>
             The Open-Source CLI is built for a single developer on one machine. <strong>VectorForce Cloud</strong> connects multiple devices (Lenovo, MacBook, Linux) and teams with end-to-end zero-knowledge encryption, live drift detection, and automated cross-agent briefings.
           </p>
           <div style="display: flex; justify-content: center; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
-            <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/?project=proj-meta-e2ee" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 8px 24px -4px rgba(16, 185, 129, 0.4);">
+            <a href="https://cloud.vectorforce.in/?project=proj-meta-e2ee" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 8px 24px -4px rgba(16, 185, 129, 0.4);">
               <span>🌐 Open Live Cloud Dashboard (Meta AI Showcase) ↗</span>
             </a>
-            <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/?project=proj-bistro-pos" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <a href="https://cloud.vectorforce.in/?project=proj-bistro-pos" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
               <span>📁 Open Restaurant Billing Workspace ↗</span>
             </a>
           </div>
@@ -996,139 +793,6 @@ vf pull</pre>
       </div>
     </section>
 
-    <!-- Developer Support & Integration Guide Section -->
-    <section id="dev-support" style="padding: 90px 0; border-top: 1px solid var(--border);">
-      <div class="container">
-        <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 48px;">
-          <span class="eyebrow" style="color: #38bdf8;">Production Engineering</span>
-          <h2 class="section-title">Developer Support &amp; Integration Guide</h2>
-          <p class="section-subtitle">
-            Comprehensive operational reference for integrating VectorForce across agentic harnesses, CI/CD runners, and enterprise repositories.
-          </p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 40px;">
-          <!-- Card 1: Cloud Auth & SSO -->
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;">
-            <div style="font-size: 1.8rem; margin-bottom: 12px;">🔑</div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Browser SSO &amp; CI/CD Auth</h3>
-            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
-              Authenticate your terminal in 1 click using <code>vf login</code> with automated browser loopback callback. In headless pipelines (GitHub Actions, Docker), mint scoped temporary tokens via <code>vf token create --ttl 24</code>.
-            </p>
-            <div style="background: var(--bg-surface); padding: 10px 14px; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: #a5b4fc; border: 1px solid var(--border);">
-              $ vf login # Browser SSO<br/>
-              $ vf token create --ttl 24
-            </div>
-          </div>
-
-          <!-- Card 2: Workspace Diagnostics -->
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;">
-            <div style="font-size: 1.8rem; margin-bottom: 12px;">🩺</div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Workspace Diagnostics &amp; Drift</h3>
-            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
-              Run <code>vf doctor</code> to verify harness configurations, Git HEAD hashes, and SQLite engine readiness. Detect silent file modifications with <code>vf drift</code> before model poisoning occurs.
-            </p>
-            <div style="background: var(--bg-surface); padding: 10px 14px; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: #34d399; border: 1px solid var(--border);">
-              $ vf doctor<br/>
-              $ vf drift --task &lt;id&gt;
-            </div>
-          </div>
-
-          <!-- Card 3: Multi-Agent Continuity -->
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;">
-            <div style="font-size: 1.8rem; margin-bottom: 12px;">🔄</div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Deterministic Briefings &amp; Handoff</h3>
-            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
-              Switch between Antigravity, Muse, Codex, and Claude Code using destination briefings (<code>vf resume --dest &lt;harness&gt;</code>) or export HMAC-SHA256 encrypted handoff packages (<code>vf export</code>).
-            </p>
-            <div style="background: var(--bg-surface); padding: 10px 14px; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: #fbbf24; border: 1px solid var(--border);">
-              $ vf resume --dest muse<br/>
-              $ vf export --task &lt;id&gt;
-            </div>
-          </div>
-        </div>
-
-        <!-- Callout Banner Linking to DEVELOPER_SUPPORT.md -->
-        <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 16px; padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
-          <div>
-            <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 6px; color: #fff;">
-              📖 Read the Full VectorForce Developer Guide
-            </h4>
-            <p style="color: var(--text-secondary); font-size: 0.94rem; max-width: 650px;">
-              Includes complete CLI recipe walkthroughs, zero-dependency Node.js internals, custom BYOK AI configurations, cryptographic envelope specifications, and FAQ.
-            </p>
-          </div>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <a href="https://github.com/getvectorforce/VectorForce/blob/main/DEVELOPER_SUPPORT.md" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-weight: 700;">
-              <span>View DEVELOPER_SUPPORT.md ↗</span>
-            </a>
-            <a href="https://omprakash-pce2011--vectorforce-cloud-vectorforce-cloud-web.modal.run/?project=proj-meta-e2ee" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <span>Live Cloud Hub ↗</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MCP Protocol Tools Reference -->
-    <section id="mcp-tools">
-      <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">Model Context Protocol</span>
-          <h2 class="section-title">11 Native MCP Tools for Autonomous Agents</h2>
-          <p class="section-subtitle">
-            Once connected via MCP, your AI coding agent automatically calls these tools to stay aligned with your project's architectural invariants without reading or tampering with package internals.
-          </p>
-        </div>
-
-        <div class="mcp-grid">
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>create_task</span> <span>TASK</span></div>
-            <p>Creates a new engineering task or subtask in SQLite WAL with parent lineage (<code>parent_task_id</code>) and initial metadata.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>update_task</span> <span>TASK</span></div>
-            <p>Updates an active task or subtask status (<code>active</code>, <code>completed</code>, <code>abandoned</code>) directly from the AI chat.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>list_tasks</span> <span>QUERY</span></div>
-            <p>Discovers and filters active, paused, or completed tasks and subtasks tracked inside the workspace SQLite WAL database.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>save_checkpoint</span> <span>WRITE</span></div>
-            <p>Commits an immutable checkpoint combining model claims with verifiable Git commit SHAs and allowlisted document hashes.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>get_resume_briefing</span> <span>READ</span></div>
-            <p>Retrieves a harness-authorized markdown briefing separating invariant constraints, active goals, and verified evidence.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>check_workspace_drift</span> <span>VERIFY</span></div>
-            <p>Compares the live working tree and allowlisted files against the latest checkpoint to flag silent changes.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>reason_about_task</span> <span>AI MEMORY</span></div>
-            <p>Generates a Llama / Meta Muse narrative summarizing where work left off, architectural risks, and ranked next actions.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>set_document_policy</span> <span>POLICY</span></div>
-            <p>Manages the strict project allowlist governing which markdown or architecture files can be collected as evidence.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>export_handoff</span> <span>BUNDLE</span></div>
-            <p>Packages selected checkpoints and verified evidence into a tamper-evident SHA-256 bundle with preview mode.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>import_handoff</span> <span>RECONCILE</span></div>
-            <p>Cryptographically verifies a handoff manifest and safely imports external task context into a destination workspace.</p>
-          </div>
-          <div class="mcp-card">
-            <div class="mcp-tool-name"><span>get_timeline</span> <span>AUDIT</span></div>
-            <p>Synthesizes a chronological continuity recap of checkpoints, decisions, and handoffs across sessions.</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
