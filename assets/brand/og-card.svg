@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="vf-grad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="vf-accent" x1="16" y1="16" x2="104" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.24"/>
+      <stop offset="60%" stop-color="#10b981" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#090d16"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.08" stroke="#6366f1" stroke-width="1">
+    <path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200"/>
+    <path d="M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630"/>
+  </g>
+  <!-- Logo Mark -->
+  <g transform="translate(88, 92)">
+    <rect width="84" height="84" rx="20" fill="#0d1321"/>
+    <rect x="2" y="2" width="80" height="80" rx="18" stroke="url(#vf-grad)" stroke-width="3.5"/>
+    <path d="M21 26L37 60L46 41" stroke="url(#vf-grad)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 26H63M45 26V58M45 42H59" stroke="url(#vf-accent)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="63" cy="26" r="4.5" fill="#10b981"/>
+    <circle cx="21" cy="26" r="4.5" fill="#6366f1"/>
+  </g>
+  <text x="196" y="146" fill="#f8fafc" font-family="Space Grotesk, sans-serif" font-size="38" font-weight="700" letter-spacing="2">VECTORFORCE</text>
+  <rect x="88" y="218" width="372" height="36" rx="6" fill="#111827" stroke="#6366f1" stroke-opacity="0.45"/>
+  <circle cx="110" cy="236" r="5" fill="#10b981"/>
+  <text x="128" y="241" fill="#a5b4fc" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="1.2">GIT FOR AI CONTEXT // E2EE CLOUD</text>
+  <text x="88" y="344" fill="#f8fafc" font-family="Space Grotesk, sans-serif" font-size="72" font-weight="700">Keep your AI</text>
+  <text x="88" y="424" fill="#34d399" font-family="Space Grotesk, sans-serif" font-size="72" font-weight="700">timeline intact.</text>
+  <text x="88" y="492" fill="#94a3b8" font-family="Space Grotesk, sans-serif" font-size="24">Local-first SQLite WAL · 11 Native MCP Tools · Zero-Knowledge Cloud Sync</text>
+  <text x="88" y="564" fill="#64748b" font-family="IBM Plex Mono, monospace" font-size="18">vectorforce.in  ·  cloud.vectorforce.in  ·  docs.vectorforce.in</text>
+</svg>
